@@ -3,4 +3,4 @@ NIM : 2511500085<br>
 NAMA : Irsya eva safitri<br>
 
 Hari ini ,kamis 02.oktober.2025 kami belajar :<br>
-1)
+1) ternyata struktur html tidak perlu ditulis lengkap karena browser punya eror tolerance
