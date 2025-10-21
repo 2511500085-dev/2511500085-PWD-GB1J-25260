@@ -70,6 +70,7 @@
          margin-top: 0;
          margin-bottom: 16px;
         }
+        #about p,
         #contact label {
             display: flex;
             justify-content: flex-start;
@@ -78,7 +79,7 @@
             padding: 6px 0;
             border-bottom: 1px solid #e6e6e6;
         }
-
+        #about strong,
         #contact label>span {
          font-weight: 600px;
          min-width: 180px;
@@ -102,11 +103,15 @@
 
 
     #contact button {
-     width: 100px;
-     padding: 8px;
-     border: none;
-     border-radius: 5px;
+     margin-top: 10px;
+     display: inline-block;
+     padding: 10px 24px;
+     font-size: 16px;
+     border-radius: 6px;
      cursor: pointer;
+     border: none;
+     transition: all 0.3s ease;
+     margin-right: 8px;
     }
 
     #contact button [type="submit"] {
