@@ -30,7 +30,7 @@ body {
             margin-bottom: 16px;
         }
     #home p {
-        text align: justify;
+        text-align: justify;
     }
      #about p, 
      #contact label {
