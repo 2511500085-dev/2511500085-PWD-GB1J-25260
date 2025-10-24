@@ -8,5 +8,6 @@ Hari ini kamis,24 oktober 2035 saya mempelajari :
 <li>copy-paste index.html dan style.css dari folder pertemuan-04</li>
 <li>membuat tombol hamburger</li>
 <li>styling untuk menu-toggle</li>
-<li>styling untuk menu-toggle</li>
+<li>styling untuk menu-toggle mobile</li>
+<li>styling elemen nav mobile</li>
 </ol>
