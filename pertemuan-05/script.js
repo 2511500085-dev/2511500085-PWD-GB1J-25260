@@ -20,14 +20,14 @@ document.querySelector("form").addEventListener("submit", function (e) {
     } 
 
     if (email.value.trim() === "") {
-        showError(nama, "Email wajib diisi.");
+        showError(email, "Email wajib diisi.");
         isValid = false;
     }   else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
         showError(email, "format email tidak valid. Contoh: nama@mail.com");
         isValid = false;
     }
 
-    if (pesan.value.trim().lrngth < 10) {
+    if (pesan.value.trim().length < 10) {
         showError(pesan, "Pesan minimal 10 karakter agar lebih jelas.");
         isValid = false;
     }
@@ -46,7 +46,7 @@ function showError(inputElement, message) {
     label.style.flexWrap = "wrap";
 
     const small = document.createElement("small");
-    small.className = "error.msg";
+    small.className = "error-msg";
     small.textContent = message;
 
     small.style.color = "red";
@@ -55,6 +55,7 @@ function showError(inputElement, message) {
     small.style.marginTop = "4px";
     small.style.flexBasis = "100%";
     small.dataset.forId = inputElement.id;
+
 
     if (inputElement.nextSibling) {
         label.insertBefore(small, inputElement.nextSibling);
@@ -82,14 +83,14 @@ function alignErrorMessage(smaLLEL,inputEL) {
     const recInput = inputEL.getBoundingClientRect();
     const offsetLeft = Math.max(0, Math.round(recInput.left - rectLabel.left));
 
-    smaLLEL.style.marginleft = offsetLeft + "px";
+    smaLLEL.style.marginLeft = offsetLeft + "px";
     smaLLEL.style.width = Math.round(recInput.width) + "px";
 }
 
 window.addEventListener("resize", () => {
     document.querySelectorAll(".error-msg").forEach(small => {
-        const target = document.getElementById(smaLL.dataset.forId);
-        if (target) alignErrorMessage(smaLL, target);
+        const target = document.getElementById(smaLLEL.dataset.forId);
+        if (target) alignErrorMessage(smaLLEL, target);
     });
 
 });
