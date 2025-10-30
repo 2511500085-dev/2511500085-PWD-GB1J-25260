@@ -6,5 +6,5 @@ NAMA : IRSYA EVA SAFITRI<br>
 Hari ini kamis,30 oktober 2035 saya mempelajari :
 <ol>
 <li>mengcopy index.php,style.css,script.js</li>
-<li>
+<li>menambahkan file hallo.php</li>
 </ol>
