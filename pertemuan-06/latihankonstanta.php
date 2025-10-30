@@ -1,8 +1,6 @@
 <?php
-define("DOSEN_PENGAMPU", "MATAKULIAH");
+define("KAMPUS", "ISB Atma Luhur");
 const ANGKATAN = 2025;
-echo "NAMA: " . BAPAK YOHANES . "<br>";
-echo "MATAKULIAH: " . PEMROGRAMAN WEB DASAR . "<br>";
-
- 
+echo "Kampus: " . KAMPUS . "<br>";
+echo "Angkatan: " . ANGKATAN;
 ?>
