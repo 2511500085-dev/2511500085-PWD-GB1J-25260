@@ -10,5 +10,6 @@ Hari ini kamis,30 oktober 2035 saya mempelajari :
 <li>menambahkan file latihan1.php</li>
 <li>menambahkan file latihanvariabel.php</li>
 <li>menambahkan file latihantipedata.php</li>
-<li>menambahkan file laihankonstanta.php</li>
+<li>menambahkan file latihankonstanta.php</li>
+<li>menambahkan file latihankomentar.php</li>
 </ol>
