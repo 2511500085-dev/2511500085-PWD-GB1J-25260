@@ -1,12 +1,12 @@
 <?php
-$nama = "Yohanes Setiawan Japriadi";
-$umur = 25;
-$tinggi = 1.75;
+$nama = "IRSYA EVA SAFITRI";
+$umur = 18;
+$tinggi = 1.55;
 $aktif = true;
-$hobi = ["Coding", "Memasak", "Musik"];
+$hobi = ["joging", "Memasak", "Musik"];
 $mahasiswa = (object)[
-    "nim" => "0344300002",
-    "nama" => "Yohanes Setiawan",
+    "nim" => "2511500085",
+    "nama" => "IRSYA EVA SAFITRI",
     "prodi" => "Teknik Informatika"
 ];
 $nilai_akhir = NULL;
