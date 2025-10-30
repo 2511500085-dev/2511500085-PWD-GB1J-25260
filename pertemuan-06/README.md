@@ -8,4 +8,5 @@ Hari ini kamis,30 oktober 2035 saya mempelajari :
 <li>mengcopy index.php,style.css,script.js</li>
 <li>menambahkan file hallo.php</li>
 <li>menambahkan file latihan1.php</li>
+<li>menambahkan file latihanvariabel.php</li>
 </ol>
