@@ -1,7 +1,7 @@
 <?php
 define("DOSEN_PENGAMPU", "bpk.Yohanes Setiawan");
-const MATAKULIAH = Pemrograman web dasar;
+const ANGKATAN = 2025;
 
 echo "DOSEN_PENGAMPU: " . DOSEN_PENGAMPU . "<br>";
-echo "MATAKULIAH: " . MATAKULIAH;
+echo "ANGKATAN: " . ANGKATAN . ;
 ?>
