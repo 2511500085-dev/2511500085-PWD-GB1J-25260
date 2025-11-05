@@ -3,5 +3,5 @@ $i = 1;
 do {
 echo "Iterasi ke-$i<br>";
 $i++;
-} while (1 == 1);
+} while ($i = 5);
 ?>
