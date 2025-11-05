@@ -139,7 +139,7 @@
             $mutu4 = "-";
             $mutu5 = "3,70";
             $bobot1 = $mutu1 * $sksMatkul1;
-            $bobot2 = "";
+            $bobot2 = $mutu2 * $sksMatkul2;
             $bobot3 = "-";
             $bobot4 = "-";
             $bobot5 = "";
@@ -178,7 +178,7 @@
              <p><strong> status :</strong>
              <?php echo $status1 ?></p>
 
-            "<hr>";
+            <hr>
 
             <p><strong> Nama Matakuliah ke-2:</strong>
              <?php echo $namaMatkul2 ?></p>
@@ -203,7 +203,7 @@
              <p><strong> status :</strong>
              <?php echo $status2 ?></p>
 
-            "<hr>";
+            <hr>
 
             <p><strong> Nama Matakuliah ke-5:</strong>
              <?php echo $namaMatkul5 ?></p>
