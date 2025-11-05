@@ -1,6 +1,6 @@
 <?php
 $HOBBY = ["Memasak", "Bermain game"];
-foreach ($hobi as $item) {
+foreach ($HOBBY as $item) {
 echo "Hobi: $item <br>";
 }
 ?>
