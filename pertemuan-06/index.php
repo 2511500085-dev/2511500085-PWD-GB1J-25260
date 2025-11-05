@@ -90,6 +90,99 @@
                 <button type="reset">Batal</button>
             </form>
         </section>
+
+        <section id="ipk"> 
+            <?php
+            $namaMatkul1 = "Algoritma dan Struktur Data"  
+            $namaMatkul2 = "Agama"
+            $namaMatkul3 = "-"
+            $namaMatkul4 = "-"
+            $namaMatkul5 = "Pemrograman Web dasar"
+            $sksMatkul1 = "4"
+            $sksMatkul2 = "2"
+            $sksMatkul3 = "-"
+            $sksMatkul4 = "-"
+            $sksMatkul5 = "3"
+            $nilaiHadir1 = "90"
+            $nilaiHadir2 = "70"
+            $nilaiHadir3 = "-"
+            $nilaiHadir4 = "-"
+            $nilaiHadir5 = "69"
+            $nilaiTugas1 = "60"
+            $nilaiTugas2 = "50"
+            $nilaiTugas3 = "-"
+            $nilaiTugas4 = "'-"
+            $nilaiTugas5 = "80"
+            $nilaiUTS1 = "80"
+            $nilaiUTS2 = "60"
+            $nilaiUTS3 = "-"
+            $nilaiUTS4 = "-"
+            $nilaiUTS5 = "90"
+            $nilaiUAS1 = "70"
+            $nilaiUAS2 = "80"
+            $nilaiUAS3 = "-"
+            $nilaiUAS4 = "-"
+            $nilaiUAS5 = "100"
+            $nilaiAkhir1 = "73"
+            $nilaiAkhir2 = "67"
+            $nilaiAkhir3 = "-"
+            $nilaiAkhir4 = "-"
+            $nilaiAkhir5 = "90"
+            $grade1 = "B"
+            $grade2 = "B-"
+            $grade3 = "-"
+            $grade4 = "-"
+            $grade5 = "E"
+            $mutu1 = "3.00"
+            $mutu2 = "2.70"
+            $mutu3 = "-"
+            $mutu4 = "-"
+            $mutu5 = "0.00"
+            $bobot1 = "12"
+            $bobot2 = "5.40"
+            $bobot3 = "-"
+            $bobot4 = "-"
+            $bobot5 = "0.00"
+            $status1 = "Lulus"
+            $status2 = "Lulus"
+            $status3 = "-"
+            $status4 = "-"
+            $status5 = "Gagal"
+            $totalBobot = "54"
+            $totalSKS = "20"
+            $IPK = "2.70"
+
+            Nilai Akhir = (0.1 * nilaiHadir) + (0.2 * nilaiTugas) + (0.3 * nilaiUTS) + (0.4 * nilaiUAS)
+            Nilai kehadiran < 70, otomatis Grade = E.
+            Grade A, A-, B+, B, B-, C+, C, C- maka Status: LULUS
+            Grade D, E maka Status: GAGAL
+            Bobot = angkaMutu * sksMatkul
+            IPK = totalBobot / totalSKS
+            ?>
+            <h2>NILAI SAYA</h2>
+            <p><strong> Nama Matakuliah ke-1:</strong>
+             <?php echo $namaMatkul1 ?></p>
+             <p><strong> SKS :</strong>
+             <?php echo $sksMatkul1 ?></p>
+             <p><strong> Kehadiran :</strong>
+             <?php echo $nilaiHadir1 ?>
+            </p><p><strong> Tugas :</strong>
+             <?php echo $nilaiTugas1 ?></p>
+             <p><strong> UTS :</strong>
+             <?php echo $nilaiUTS1 ?></p>
+             <p><strong> UAS :</strong>
+             <?php echo $nilaiUAS1 ?></p>
+             <p><strong> Nilai Akhir:</strong>
+             <?php echo $nilaiAkhir ?></p>
+             <p><strong> Grade :</strong>
+             <?php echo $grade1 ?></p>
+             <p><strong> Angka Mutu :</strong>
+             <?php echo $mutu1 ?></p>
+             <p><strong> Bobot :</strong>
+             <?php echo $bobot1 ?></p>
+             <p><strong> status :</strong>
+             <?php echo $status1 ?></p>
+    </section>
     </main>
     <footer>
         <p>&copy; &#9786; 2025 IRSYA EVA SAFITRI 2511500085</p>
