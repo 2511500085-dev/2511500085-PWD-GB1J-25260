@@ -167,7 +167,7 @@
              <p><strong> UAS :</strong>
              <?php echo $nilaiUAS1 ?></p>
              <p><strong> Nilai Akhir :</strong>
-             <?php echo $nilaiAkhir ?></p>
+             <?php echo $nilaiAkhir1 ?></p>
              <p><strong> Grade :</strong>
              <?php echo $grade1 ?></p>
              <p><strong> Angka Mutu :</strong>
