@@ -178,7 +178,7 @@
              <p><strong> status :</strong>
              <?php echo $status1 ?></p>
 
-             echo "<hr>"; // Garis pembatas
+            "<hr>";
 
             <p><strong> Nama Matakuliah ke-2:</strong>
              <?php echo $namaMatkul2 ?></p>
@@ -201,10 +201,32 @@
              <p><strong> Bobot :</strong>
              <?php echo $bobot2 ?></p>
              <p><strong> status :</strong>
-             <?php echo $status1 ?></p>
+             <?php echo $status2 ?></p>
 
+            "<hr>";
 
-
+            <p><strong> Nama Matakuliah ke-5:</strong>
+             <?php echo $namaMatkul5 ?></p>
+             <p><strong> SKS :</strong>
+             <?php echo $sksMatkul5 ?></p>
+             <p><strong> Kehadiran :</strong>
+             <?php echo $nilaiHadir5 ?>
+            </p><p><strong> Tugas :</strong>
+             <?php echo $nilaiTugas5 ?></p>
+             <p><strong> UTS :</strong>
+             <?php echo $nilaiUTS5 ?></p>
+             <p><strong> UAS :</strong>
+             <?php echo $nilaiUAS5 ?></p>
+             <p><strong> Nilai Akhir :</strong>
+             <?php echo $nilaiAkhir5 ?></p>
+             <p><strong> Grade :</strong>
+             <?php echo $grade5 ?></p>
+             <p><strong> Angka Mutu :</strong>
+             <?php echo $mutu5 ?></p>
+             <p><strong> Bobot :</strong>
+             <?php echo $bobot5 ?></p>
+             <p><strong> status :</strong>
+             <?php echo $status5 ?></p>
 
 
     </section>
