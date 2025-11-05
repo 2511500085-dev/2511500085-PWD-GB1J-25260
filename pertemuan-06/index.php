@@ -127,7 +127,7 @@
             $nilaiAkhir2 = (0.1 * $nilaiHadir2) + (0.2 * $nilaiTugas2) + (0.3 * $nilaiUTS2) + (0.4 * $nilaiUAS2);
             $nilaiAkhir3 = "-";
             $nilaiAkhir4 = "-";
-            $nilaiAkhir5 = "";
+            $nilaiAkhir5 = (0.1 * $nilaiHadir5) + (0.2 * $nilaiTugas5) + (0.3 * $nilaiUTS5) + (0.4 * $nilaiUAS5);
             $grade1 = $nilaiAkhir1 < 70;
             $grade2 = "";
             $grade3 = "-";
