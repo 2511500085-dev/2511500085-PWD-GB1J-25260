@@ -36,10 +36,12 @@
             $NIM = "2511500085";
             $nim = "2511500222";
             $Nim = "";
+            $NAMA = "IRSYA EVA SAFITRI";
+            $nama = "irsya eva safitri"
             ?>
             <h2>Tentang Saya</h2>
             <p><strong>NIM :</strong> <?php echo $NIM ?></p>
-            <p><strong>NAMA :</strong>IRSYA EVA SAFITRI&#128525;</p>
+            <p><strong>NAMA :</strong> <?php echo #NIM ?>&#128525;</p>
             <p><strong>TEMPAT LAHIR :</strong>Desa Berang</p>
             <p><strong>TANGGAL LAHIR :</strong>15 JUNI 2007</p>
             <p><strong>HOBBY :</strong>Memasak ,Bermain Game</p>
