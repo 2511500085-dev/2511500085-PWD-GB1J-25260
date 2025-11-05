@@ -37,18 +37,27 @@
             $nim = "2511500222";
             $Nim = "";
             $NAMA = "IRSYA EVA SAFITRI";
-            $nama = "irsya eva safitri"
+            $nama = "irsya eva safitri";
+            $TEMPAT_LAHIR = "Desa Berang";
+            $TANGGAL_LAHIR = "15 JUNI 2007";
+            $HOBBY = "Memasak, Bermain Game";
+            $PASANGAN = "ada";
+            $PEKERJAAN = "Mahasiswa";
+            $NAMA_ORANGTUA = " AYAH : Indra dan IBU : Ratna susi";
+            $NAMA_ADIK = "Syifa Nuraini";
+            $NAMA_KAKAK = "-";
             ?>
             <h2>Tentang Saya</h2>
             <p><strong>NIM :</strong> <?php echo $NIM ?></p>
             <p><strong>NAMA :</strong> <?php echo $NAMA ?>&#128525;</p>
-            <p><strong>TEMPAT LAHIR :</strong>Desa Berang</p>
-            <p><strong>TANGGAL LAHIR :</strong>15 JUNI 2007</p>
-            <p><strong>HOBBY :</strong>Memasak ,Bermain Game</p>
+            <p><strong>TEMPAT LAHIR :</strong> <?php echo $TEMPAT_LAHIR</p>
+            <p><strong>TANGGAL LAHIR :</strong> <?php echo $TANGGAL_LAHIR</p>
+            <p><strong>HOBBY :</strong> <?php echo $HOBBY</p>
             <p><strong>PASANGAN :</strong>ada&hearts;</p>
             <p><strong>PEKERJAAN :</strong>Mahasiswa</p>
             <p><strong>NAMA ORANGTUA :</strong> AYAH : Indra&hearts; dan IBU : Ratna susi&hearts;</p>
             <p><strong>NAMA ADIK :</strong>Syifa Nuraini&hearts;</p>
+            <p><strong>NAMA KAKAK :</strong>-</p>
         </section>
         <section id="contact">
             <h2>Kontak Saya</h2>
