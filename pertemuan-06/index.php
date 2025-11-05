@@ -147,11 +147,11 @@
             $mutu4 = "-";
             $mutu5 = "3,70";
 
-            $bobot1 = (3,70 * $sksMatkul1);
-            $bobot2 = (2,70 * $sksMatkul2);
+            $bobot1 = 3,70 * 4;
+            $bobot2 = 2,70 * 2;
             $bobot3 = "-";
             $bobot4 = "-";
-            $bobot5 = (3,70 * $sksMatkul5);
+            $bobot5 =  3,70 * 3;
 
             $status1 = "Lulus";
             $status2 = "Lulus";
