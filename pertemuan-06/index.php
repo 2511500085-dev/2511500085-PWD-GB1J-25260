@@ -128,7 +128,7 @@
             $nilaiAkhir3 = "-";
             $nilaiAkhir4 = "-";
             $nilaiAkhir5 = "";
-            $grade1 = $nilaiHadir1 = 90;
+            $grade1 = $nilaiHadir1 >= 85;
             $grade2 = "";
             $grade3 = "-";
             $grade4 = "-";
