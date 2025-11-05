@@ -151,7 +151,7 @@
             $totalBobot = "";
             $totalSKS = "";
             $IPK = "";
-
+            
             ?>
             <h2>NILAI SAYA</h2>
             <p><strong> Nama Matakuliah ke-1:</strong>
@@ -176,6 +176,59 @@
              <?php echo $bobot1 ?></p>
              <p><strong> status :</strong>
              <?php echo $status1 ?></p>
+
+             <hr> 
+                 if (isset($_POST['submit'])) {
+
+             <?php
+            // Data input
+            $namaMatkul1 = $_POST "Algoritma dan Struktur Data";
+            $sksMatkul1 = $_POST 4;
+            $nilaiHadir1 = $_POST 90;
+            $nilaiTugas1 = $_POST 60;
+            $nilaiUTS1= $_POST 80;
+            $nilaiUAS1 = $_POST 70;
+
+            // Hitung Nilai Akhir
+            $nilaiAkhir = (0.1 * $nilaiHadir1) + (0.2 * $nilaiTugas1) + (0.3 * $nilaiUTS1) + (0.4 * $nilaiUAS1);
+
+            //Tentukan Grade
+            if ($nilaiHadir1 > 70) {
+                 $grade1 = "A+";
+            } elseif ($nilaiAkhir1 >= 90) {
+                $grade1 = "A+";
+            } else {
+                $grade1 = "B";
+            }
+
+            // Tentukan Status
+            if (in_array($grade1, ["A", "A-", "B+", "B", "B-", "C+", "C", "C-"])) {
+            $status1 = "Lulus";  
+            } else {    
+            $status1 = "Tidak Lulus";
+            }
+
+            // Tentukan Angka Mutu dan Bobot
+            switch ($grade1) {
+                case "A+" : $mutu1 * $sksMatkul1; break;
+            }
+            
+            $bobot1 = $mutu1 * $sksMatkul1;
+            
+
+             // Tampilkan hasil
+
+            echo "<h2>Hasil Perhitungan nilai</h2>";
+            echo "Mata Kuliah: $namaMatkul1 <br>";
+            echo "SKS: $sksMatkul1 <br>";
+            echo "Nilai Akhir: $nilaiAkhir1 <br>";
+            echo "Grade: $grade1 <br>";
+            echo "Mutu (Angka Mutu): $mutu1 <br>";
+            echo "Bobot: $bobot1 <br>";
+            echo "Status: <b style='color:" . ($status == 'LULUS' ? 'green' : 'red') . "'>$status</b><br>";
+
+            ?> }
+             </hr>
     </section>
     </main>
     <footer>
