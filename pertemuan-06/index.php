@@ -128,7 +128,7 @@
             $nilaiAkhir3 = "-";
             $nilaiAkhir4 = "-";
             $nilaiAkhir5 = "";
-            $grade1 = "";
+            $grade1 = $nilaiHadir1 = 90;
             $grade2 = "";
             $grade3 = "-";
             $grade4 = "-";
@@ -138,7 +138,7 @@
             $mutu3 = "-";
             $mutu4 = "-";
             $mutu5 = "";
-            $bobot1 = $mutu1 * $sksMatkul1;
+            $bobot1 = "";
             $bobot2 = "";
             $bobot3 = "-";
             $bobot4 = "-";
