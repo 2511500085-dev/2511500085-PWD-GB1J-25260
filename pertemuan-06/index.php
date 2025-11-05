@@ -151,7 +151,7 @@
             $totalBobot = "54";
             $totalSKS = "20";
             $IPK = "2.70";
-            
+
             ?>
             <h2>NILAI SAYA</h2>
             <p><strong> Nama Matakuliah ke-1:</strong>
@@ -166,7 +166,7 @@
              <?php echo $nilaiUTS1 ?></p>
              <p><strong> UAS :</strong>
              <?php echo $nilaiUAS1 ?></p>
-             <p><strong> Nilai Akhir:</strong>
+             <p><strong> Nilai Akhir :</strong>
              <?php echo $nilaiAkhir ?></p>
              <p><strong> Grade :</strong>
              <?php echo $grade1 ?></p>
