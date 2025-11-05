@@ -43,21 +43,35 @@
             $HOBBY = "Memasak, Bermain Game";
             $PASANGAN = "ada";
             $PEKERJAAN = "Mahasiswa";
-            $NAMA_ORANGTUA = " AYAH : Indra dan IBU : Ratna susi";
+            $NAMA_ORANGTUA = " AYAH : Indra &hearts; dan IBU : Ratna susi &hearts;";
             $NAMA_ADIK = "Syifa Nuraini";
             $NAMA_KAKAK = "-";
             ?>
             <h2>Tentang Saya</h2>
-            <p><strong>NIM :</strong> <?php echo $NIM ?></p>
-            <p><strong>NAMA :</strong> <?php echo $NAMA ?>&#128525;</p>
-            <p><strong>TEMPAT LAHIR :</strong> <?php echo $TEMPAT_LAHIR</p>
-            <p><strong>TANGGAL LAHIR :</strong> <?php echo $TANGGAL_LAHIR</p>
-            <p><strong>HOBBY :</strong> <?php echo $HOBBY</p>
-            <p><strong>PASANGAN :</strong>ada&hearts;</p>
-            <p><strong>PEKERJAAN :</strong>Mahasiswa</p>
-            <p><strong>NAMA ORANGTUA :</strong> AYAH : Indra&hearts; dan IBU : Ratna susi&hearts;</p>
-            <p><strong>NAMA ADIK :</strong>Syifa Nuraini&hearts;</p>
-            <p><strong>NAMA KAKAK :</strong>-</p>
+            <p><strong>NIM :</strong>
+             <?php echo $NIM
+              ?></p>
+            <p><strong>NAMA :</strong> 
+            <?php echo $NAMA ?>
+            &#128525;</p>
+            <p><strong>TEMPAT LAHIR :</strong>
+             <?php echo $TEMPAT_LAHIR ?></p>
+            <p><strong>TANGGAL LAHIR :</strong>
+             <?php echo $TANGGAL_LAHIR ?></p>
+            <p><strong>HOBBY :</strong> 
+            <?php echo $HOBBY ?></p>
+            <p><strong>PASANGAN :</strong>
+             <?php echo $PASANGAN ?>
+             &hearts;</p>
+            <p><strong>PEKERJAAN :</strong> 
+            <?php echo $PEKERJAAN ?></p>
+            <p><strong>NAMA ORANGTUA :</strong>
+             <?php echo $NAMA_ORANGTUA ?></p>
+            <p><strong>NAMA ADIK :</strong>
+            <?php echo $NAMA_ADIK ?> 
+            &hearts;</p>
+            <p><strong>NAMA KAKAK :</strong>
+            <?php echo $NAMA_KAKAK ?></p>
         </section>
         <section id="contact">
             <h2>Kontak Saya</h2>
