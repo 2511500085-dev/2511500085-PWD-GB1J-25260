@@ -1,5 +1,5 @@
 <?php
-$hobi = ["Coding", "Memasak", "Musik"];
+$HOBBY = ["Memasak", "Bermain game"];
 foreach ($hobi as $item) {
 echo "Hobi: $item <br>";
 }
