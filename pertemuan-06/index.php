@@ -133,7 +133,7 @@
             $grade3 = "-";
             $grade4 = "-";
             $grade5 = "";
-            $mutu1 = "";
+            $mutu1 = $grade1;
             $mutu2 = "";
             $mutu3 = "-";
             $mutu4 = "-";
