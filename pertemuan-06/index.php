@@ -98,56 +98,67 @@
             $namaMatkul3 = "-";
             $namaMatkul4 = "-";
             $namaMatkul5 = "Pemrograman Web dasar";
+            
             $sksMatkul1 = "4";
             $sksMatkul2 = "2";
             $sksMatkul3 = "-";
             $sksMatkul4 = "-";
             $sksMatkul5 = "3";
+            
             $nilaiHadir1 = "90";
             $nilaiHadir2 = "70";
             $nilaiHadir3 = "-";
             $nilaiHadir4 = "-";
             $nilaiHadir5 = "69";
+            
             $nilaiTugas1 = "60";
             $nilaiTugas2 = "50";
             $nilaiTugas3 = "-";
             $nilaiTugas4 = "'-";
             $nilaiTugas5 = "80";
+            
             $nilaiUTS1 = "80";
             $nilaiUTS2 = "60";
             $nilaiUTS3 = "-";
             $nilaiUTS4 = "-";
             $nilaiUTS5 = "90";
+            
             $nilaiUAS1 = "70";
             $nilaiUAS2 = "80";
             $nilaiUAS3 = "-";
             $nilaiUAS4 = "-";
             $nilaiUAS5 = "100";
+            
             $nilaiAkhir1 = (0.1 * $nilaiHadir1) + (0.2 * $nilaiTugas1) + (0.3 * $nilaiUTS1) + (0.4 * $nilaiUAS1);
             $nilaiAkhir2 = (0.1 * $nilaiHadir2) + (0.2 * $nilaiTugas2) + (0.3 * $nilaiUTS2) + (0.4 * $nilaiUAS2);
             $nilaiAkhir3 = "-";
             $nilaiAkhir4 = "-";
             $nilaiAkhir5 = (0.1 * $nilaiHadir5) + (0.2 * $nilaiTugas5) + (0.3 * $nilaiUTS5) + (0.4 * $nilaiUAS5);
+            
             $grade1 = "A-";
             $grade2 = "B-";
             $grade3 = "-";
             $grade4 = "-";
             $grade5 = "A-";
+            
             $mutu1 = "3,70";
             $mutu2 = "2,70";
             $mutu3 = "-";
             $mutu4 = "-";
             $mutu5 = "3,70";
+
             $bobot1 = $mutu1 * $sksMatkul1;
             $bobot2 = $mutu2 * $sksMatkul2;
             $bobot3 = "-";
             $bobot4 = "-";
             $bobot5 = $mutu5 * $sksMatkul5;
-            $status1 = "";
-            $status2 = "";
+
+            $status1 = "Lulus";
+            $status2 = "Lulus";
             $status3 = "-";
             $status4 = "-";
-            $status5 = "";
+            $status5 = "Lulus";
+
             $totalBobot = "";
             $totalSKS = "";
             $IPK = "";
