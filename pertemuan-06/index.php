@@ -161,7 +161,7 @@
 
             $totalBobot = $bobot1 + $bobot2 + $bobot5;
             $totalSKS = $sksMatkul1 + $sksMatkul2 + $sksMatkul5;
-            $IPK = "";
+            $IPK = $totalBobot / $totalSKS;
             
             ?>
            
