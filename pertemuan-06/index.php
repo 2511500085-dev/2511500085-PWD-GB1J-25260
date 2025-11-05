@@ -99,11 +99,11 @@
             $namaMatkul4 = "-";
             $namaMatkul5 = "Pemrograman Web dasar";
             
-            $sksMatkul1 = floatval "4";
-            $sksMatkul2 = floatval "2";
+            $sksMatkul1 = "4";
+            $sksMatkul2 = "2";
             $sksMatkul3 = "-";
             $sksMatkul4 = "-";
-            $sksMatkul5 = floatval"3";
+            $sksMatkul5 = "3";
             
             $nilaiHadir1 = "90";
             $nilaiHadir2 = "70";
@@ -140,12 +140,12 @@
             $grade3 = "-";
             $grade4 = "-";
             $grade5 = "A-";
-            
-            $mutu1 = "3,70";
-            $mutu2 = "2,70";
+
+            $mutu1 = "3.70";
+            $mutu2 = "2.70";
             $mutu3 = "-";
             $mutu4 = "-";
-            $mutu5 = "3,70";
+            $mutu5 = "3.70";
 
             $bobot1 = $mutu1*$sksMatkul1;
             $bobot2 = $mutu2*$sksMatkul2;
