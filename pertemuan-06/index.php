@@ -142,7 +142,7 @@
             $bobot2 = $mutu2 * $sksMatkul2;
             $bobot3 = "-";
             $bobot4 = "-";
-            $bobot5 = "";
+            $bobot5 = $mutu5 * $sksMatkul5;
             $status1 = "";
             $status2 = "";
             $status3 = "-";
