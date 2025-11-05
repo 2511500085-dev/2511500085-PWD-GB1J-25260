@@ -129,8 +129,8 @@
             $nilaiAkhir4 = "-";
             $nilaiAkhir5 = (0.1 * $nilaiHadir5) + (0.2 * $nilaiTugas5) + (0.3 * $nilaiUTS5) + (0.4 * $nilaiUAS5);
             $grade1 = "A-";
-            $grade2 = "";
-            $grade3 = "B-";
+            $grade2 = "B-";
+            $grade3 = "-";
             $grade4 = "-";
             $grade5 = "A-";
             $mutu1 = "3,70";
