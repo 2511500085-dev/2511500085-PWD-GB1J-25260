@@ -219,7 +219,7 @@
             <p><strong> Nama Matakuliah ke-3:</strong>
              <?php echo $namaMatkul3 ?></p>
              <p><strong> SKS :</strong>
-             <?php echo $sksMatkul2 ?></p>
+             <?php echo $sksMatkul3 ?></p>
              <p><strong> Kehadiran :</strong>
              <?php echo $nilaiHadir3 ?>
             </p><p><strong> Tugas :</strong>
