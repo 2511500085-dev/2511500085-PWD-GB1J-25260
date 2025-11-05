@@ -151,13 +151,7 @@
             $totalBobot = "54";
             $totalSKS = "20";
             $IPK = "2.70";
-
-            Nilai Akhir = (0.1 * nilaiHadir) + (0.2 * nilaiTugas) + (0.3 * nilaiUTS) + (0.4 * nilaiUAS)
-            Nilai kehadiran < 70, otomatis Grade = E.
-            Grade A, A-, B+, B, B-, C+, C, C- maka Status: LULUS
-            Grade D, E maka Status: GAGAL
-            Bobot = angkaMutu * sksMatkul
-            IPK = totalBobot / totalSKS
+            
             ?>
             <h2>NILAI SAYA</h2>
             <p><strong> Nama Matakuliah ke-1:</strong>
