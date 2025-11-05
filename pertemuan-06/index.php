@@ -159,8 +159,8 @@
             $status4 = "-";
             $status5 = "Lulus";
 
-            $totalBobot = "";
-            $totalSKS = "";
+            $totalBobot = $bobot1 + $bobot2 + $bobot5;
+            $totalSKS = $sksMatkul1 + $sksMatkul2 + $sksMatkul5;
             $IPK = "";
             
             ?>
@@ -238,7 +238,15 @@
              <?php echo $bobot5 ?></p>
              <p><strong> status :</strong>
              <?php echo $status5 ?></p>
+            
+             <hr>
 
+             <p><strong> Total bobot </strong>
+             <?php echo $totalBobot ?></p>
+             <p><strong> Total sks :</strong>
+             <?php echo $totalSKS ?></p>
+             <p><strong> IPK :</strong>
+             <?php echo $IPK ?>
 
     </section>
     </main>
