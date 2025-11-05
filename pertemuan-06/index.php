@@ -85,14 +85,6 @@
                 <label for="txtPesan"><span>Pesan Anda:</span>
                 <textarea name="txtPesan" id="txtPesan" rows="4" placeholder="Tulis pesan anda"></textarea>
                 <small id="charCount">0/200 karakter</small>
-                <?php
-                // Ini komentar 1 baris
-                # Ini juga komentar 1 baris
-                /*
-                Ini komentar
-                lebih dari satu baris
-                */
-                ?>
                 </label>
                 <button type="submit">Kirim</button>
                 <button type="reset">Batal</button>
