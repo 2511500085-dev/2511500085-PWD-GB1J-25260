@@ -34,7 +34,8 @@
         <section id="about">
             <?php
             $NIM = "2511500085";
-            $nim = "2511500085";
+            $nim = "2511500222";
+            $Nim = "";
             ?>
             <h2>Tentang Saya</h2>
             <p><strong>NIM :</strong> <?php echo $NIM ?></p>
