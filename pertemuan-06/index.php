@@ -123,7 +123,7 @@
             $nilaiUAS3 = "-";
             $nilaiUAS4 = "-";
             $nilaiUAS5 = "100";
-            $nilaiAkhir1 = "";
+            $nilaiAkhir1 = (0.1 * $nilaiHadir1) + (0.2 * $nilaiTugas1) + (0.3 * $nilaiUTS1) + (0.4 * $nilaiUAS1);
             $nilaiAkhir2 = "";
             $nilaiAkhir3 = "-";
             $nilaiAkhir4 = "-";
