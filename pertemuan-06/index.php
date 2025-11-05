@@ -216,6 +216,56 @@
 
             <hr>
 
+            <p><strong> Nama Matakuliah ke-3:</strong>
+             <?php echo $namaMatkul3 ?></p>
+             <p><strong> SKS :</strong>
+             <?php echo $sksMatkul2 ?></p>
+             <p><strong> Kehadiran :</strong>
+             <?php echo $nilaiHadir3 ?>
+            </p><p><strong> Tugas :</strong>
+             <?php echo $nilaiTugas3 ?></p>
+             <p><strong> UTS :</strong>
+             <?php echo $nilaiUTS3 ?></p>
+             <p><strong> UAS :</strong>
+             <?php echo $nilaiUAS3 ?></p>
+             <p><strong> Nilai Akhir :</strong>
+             <?php echo $nilaiAkhir3 ?></p>
+             <p><strong> Grade :</strong>
+             <?php echo $grade3 ?></p>
+             <p><strong> Angka Mutu :</strong>
+             <?php echo $mutu3 ?></p>
+             <p><strong> Bobot :</strong>
+             <?php echo $bobot3 ?></p>
+             <p><strong> status :</strong>
+             <?php echo $status3 ?></p>
+
+            <hr>
+
+            <p><strong> Nama Matakuliah ke-4:</strong>
+             <?php echo $namaMatkul4 ?></p>
+             <p><strong> SKS :</strong>
+             <?php echo $sksMatkul4 ?></p>
+             <p><strong> Kehadiran :</strong>
+             <?php echo $nilaiHadir4 ?>
+            </p><p><strong> Tugas :</strong>
+             <?php echo $nilaiTugas4 ?></p>
+             <p><strong> UTS :</strong>
+             <?php echo $nilaiUTS4 ?></p>
+             <p><strong> UAS :</strong>
+             <?php echo $nilaiUAS4 ?></p>
+             <p><strong> Nilai Akhir :</strong>
+             <?php echo $nilaiAkhir4 ?></p>
+             <p><strong> Grade :</strong>
+             <?php echo $grade4 ?></p>
+             <p><strong> Angka Mutu :</strong>
+             <?php echo $mutu4 ?></p>
+             <p><strong> Bobot :</strong>
+             <?php echo $bobot4 ?></p>
+             <p><strong> status :</strong>
+             <?php echo $status4 ?></p>
+
+            <hr>
+
             <p><strong> Nama Matakuliah ke-5:</strong>
              <?php echo $namaMatkul5 ?></p>
              <p><strong> SKS :</strong>
