@@ -99,11 +99,11 @@
             $namaMatkul4 = "-";
             $namaMatkul5 = "Pemrograman Web dasar";
             
-            $sksMatkul1 = "4";
-            $sksMatkul2 = "2";
+            $sksMatkul1 = floatval "4";
+            $sksMatkul2 = floatval "2";
             $sksMatkul3 = "-";
             $sksMatkul4 = "-";
-            $sksMatkul5 = "3";
+            $sksMatkul5 = floatval"3";
             
             $nilaiHadir1 = "90";
             $nilaiHadir2 = "70";
