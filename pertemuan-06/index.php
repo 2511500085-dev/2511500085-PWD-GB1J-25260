@@ -153,6 +153,7 @@
             $IPK = "";
             
             ?>
+           
             <h2>NILAI SAYA</h2>
             <p><strong> Nama Matakuliah ke-1:</strong>
              <?php echo $namaMatkul1 ?></p>
@@ -176,7 +177,36 @@
              <?php echo $bobot1 ?></p>
              <p><strong> status :</strong>
              <?php echo $status1 ?></p>
-                
+
+             echo "<hr>"; // Garis pembatas
+
+            <p><strong> Nama Matakuliah ke-2:</strong>
+             <?php echo $namaMatkul2 ?></p>
+             <p><strong> SKS :</strong>
+             <?php echo $sksMatkul2 ?></p>
+             <p><strong> Kehadiran :</strong>
+             <?php echo $nilaiHadir2 ?>
+            </p><p><strong> Tugas :</strong>
+             <?php echo $nilaiTugas2 ?></p>
+             <p><strong> UTS :</strong>
+             <?php echo $nilaiUTS2 ?></p>
+             <p><strong> UAS :</strong>
+             <?php echo $nilaiUAS2 ?></p>
+             <p><strong> Nilai Akhir :</strong>
+             <?php echo $nilaiAkhir2 ?></p>
+             <p><strong> Grade :</strong>
+             <?php echo $grade2 ?></p>
+             <p><strong> Angka Mutu :</strong>
+             <?php echo $mutu2 ?></p>
+             <p><strong> Bobot :</strong>
+             <?php echo $bobot2 ?></p>
+             <p><strong> status :</strong>
+             <?php echo $status1 ?></p>
+
+
+
+
+
     </section>
     </main>
     <footer>
