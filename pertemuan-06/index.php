@@ -37,7 +37,7 @@
             $nim = "2511500085";
             ?>
             <h2>Tentang Saya</h2>
-            <p><strong>NIM :</strong>2511500085</p>
+            <p><strong>NIM :</strong>2511500085 <?php echo $NIM ?></p>
             <p><strong>NAMA :</strong>IRSYA EVA SAFITRI&#128525;</p>
             <p><strong>TEMPAT LAHIR :</strong>Desa Berang</p>
             <p><strong>TANGGAL LAHIR :</strong>15 JUNI 2007</p>
