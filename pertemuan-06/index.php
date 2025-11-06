@@ -155,8 +155,8 @@
 
             $status1 = "Lulus";
             $status2 = "Lulus";
-            $status3 = "-";
-            $status4 = "-";
+            $status3 = "Lulus";
+            $status4 = "Lulus";
             $status5 = "Lulus";
 
             $totalBobot = $bobot1 + $bobot2 + $bobot5;
