@@ -114,7 +114,8 @@ header li a {
 }
         #home,
         #about,
-        #contact {
+        #contact 
+        #IPK {
             background-color: #ffffff;
             border-radius: 10px;
             padding: 20px;
@@ -125,7 +126,8 @@ header li a {
 
         #home h2,
         #about h2,
-        #contact h2 {
+        #contact h2 
+        #IPK h2 {
             color: #003366;
             border-bottom: 2px solid #003366;
             padding-bottom: 6px;
@@ -136,7 +138,8 @@ header li a {
         text-align: justify;
     }
      #about p, 
-     #contact label {
+     #contact label
+     #IPK label {
         display: flex;
         justify-content: flex-start;
         align-items: baseline;
@@ -146,7 +149,8 @@ header li a {
      }
 
      #about strong,
-     #contact label>span {
+     #contact label>span
+     #IPK strong {
         min-width: 180px;
         color: #003366;
         font-weight: 600;
@@ -169,12 +173,14 @@ header li a {
      
      @media (max-width: 600px) {
         #about p,
-        #about label {
+        #about label
+        #IPK label {
             flex-direction: column;
             align-items: flex-start;
         }
         #about strong,
-        #contact label>span {
+        #contact label>span
+        #IPK strong  {
             text-align: left;
             padding-right: 0;
             margin-bottom: 2px;
