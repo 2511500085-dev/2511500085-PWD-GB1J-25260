@@ -159,8 +159,8 @@
             $status4 = "Lulus";
             $status5 = "Lulus";
 
-            $totalBobot = $bobot1 + $bobot2 + $bobot5;
-            $totalSKS = $sksMatkul1 + $sksMatkul2 + $sksMatkul5;
+            $totalBobot = $bobot1 + $bobot2 + $bobot3 + $bobot4 + $bobot5;
+            $totalSKS = $sksMatkul1 + $sksMatkul2 + $sksMatkul3 + $sksMatkul4 + $sksMatkul5;
             $IPK = $totalBobot / $totalSKS;
             
             ?>
