@@ -131,8 +131,8 @@
             
             $nilaiAkhir1 = (0.1 * $nilaiHadir1) + (0.2 * $nilaiTugas1) + (0.3 * $nilaiUTS1) + (0.4 * $nilaiUAS1);
             $nilaiAkhir2 = (0.1 * $nilaiHadir2) + (0.2 * $nilaiTugas2) + (0.3 * $nilaiUTS2) + (0.4 * $nilaiUAS2);
-            $nilaiAkhir3 = (0.1 * $nilaiHadir3) + (0.2 * $nilaiTugas3) + (0.3 * $nilaiUTS3) + (0.4 * $nilaiUAS3);
-            $nilaiAkhir4 = (0.1 * $nilaiHadir4) + (0.2 * $nilaiTugas4) + (0.3 * $nilaiUTS4) + (0.4 * $nilaiUAS4);
+            $nilaiAkhir3 = (0.1 * $nilai Hadir3) + (0.2 * $nilai Tugas3) + (0.3 * $nilaiUTS3) + (0.4 * $nilaiUAS3);
+            $nilaiAkhir4 = (0.1 * $nilai Hadir4) + (0.2 * $nilai Tugas4) + (0.3 * $nilaiUTS4) + (0.4 * $nilaiUAS4);
             $nilaiAkhir5 = (0.1 * $nilaiHadir5) + (0.2 * $nilaiTugas5) + (0.3 * $nilaiUTS5) + (0.4 * $nilaiUAS5);
             
             $grade1 = "A-";
