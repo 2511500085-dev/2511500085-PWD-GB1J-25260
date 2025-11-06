@@ -137,20 +137,20 @@
             
             $grade1 = "A-";
             $grade2 = "B-";
-            $grade3 = "-";
-            $grade4 = "-";
+            $grade3 = "B+";
+            $grade4 = "B+";
             $grade5 = "A-";
 
             $mutu1 = "3.70";
             $mutu2 = "2.70";
-            $mutu3 = "-";
-            $mutu4 = "-";
+            $mutu3 = "3.30";
+            $mutu4 = "3.30";
             $mutu5 = "3.70";
 
             $bobot1 = $mutu1*$sksMatkul1;
             $bobot2 = $mutu2*$sksMatkul2;
-            $bobot3 = "-";
-            $bobot4 = "-";
+            $bobot3 = $mutu3*$sksMatkul3;
+            $bobot4 = $mutu5*$sksMatkul4;
             $bobot5 = $mutu5*$sksMatkul5;
 
             $status1 = "Lulus";
