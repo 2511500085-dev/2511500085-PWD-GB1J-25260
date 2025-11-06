@@ -166,7 +166,7 @@
             ?>
            
             <h2>NILAI SAYA</h2>
-            <p><strong> Nama Matakuliah ke-1:</strong>
+            <p><strong> Nama Matakuliah ke-1 :</strong>
              <?php echo $namaMatkul1 ?></p>
              <p><strong> SKS :</strong>
              <?php echo $sksMatkul1 ?></p>
@@ -191,7 +191,7 @@
 
             <hr>
 
-            <p><strong> Nama Matakuliah ke-2:</strong>
+            <p><strong> Nama Matakuliah ke-2 :</strong>
              <?php echo $namaMatkul2 ?></p>
              <p><strong> SKS :</strong>
              <?php echo $sksMatkul2 ?></p>
@@ -216,7 +216,7 @@
 
             <hr>
 
-            <p><strong> Nama Matakuliah ke-3:</strong>
+            <p><strong> Nama Matakuliah ke-3 :</strong>
              <?php echo $namaMatkul3 ?></p>
              <p><strong> SKS :</strong>
              <?php echo $sksMatkul3 ?></p>
@@ -241,7 +241,7 @@
 
             <hr>
 
-            <p><strong> Nama Matakuliah ke-4:</strong>
+            <p><strong> Nama Matakuliah ke-4 :</strong>
              <?php echo $namaMatkul4 ?></p>
              <p><strong> SKS :</strong>
              <?php echo $sksMatkul4 ?></p>
@@ -266,7 +266,7 @@
 
             <hr>
 
-            <p><strong> Nama Matakuliah ke-5:</strong>
+            <p><strong> Nama Matakuliah ke-5 :</strong>
              <?php echo $namaMatkul5 ?></p>
              <p><strong> SKS :</strong>
              <?php echo $sksMatkul5 ?></p>
@@ -291,7 +291,7 @@
             
              <hr>
 
-             <p><strong> Total bobot </strong>
+             <p><strong> Total bobot :</strong>
              <?php echo $totalBobot ?></p>
              <p><strong> Total sks :</strong>
              <?php echo $totalSKS ?></p>
