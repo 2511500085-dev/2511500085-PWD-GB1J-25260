@@ -139,7 +139,7 @@ header li a {
     }
      #about p, 
      #contact label
-     #ipk label {
+     #ipk p {
         display: flex;
         justify-content: flex-start;
         align-items: baseline;
@@ -174,7 +174,7 @@ header li a {
      @media (max-width: 600px) {
         #about p,
         #about label
-        #ipk label {
+        #ipk p {
             flex-direction: column;
             align-items: flex-start;
         }
