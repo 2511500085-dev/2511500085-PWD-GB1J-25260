@@ -3,7 +3,7 @@
     $sesnama = $_SESSION["sesnama"];
     $sesemail = $_SESSION["sesemail"];
     $sespesan = $_SESSION["sespesan"];
-    echo $sesnama . $sesemail . $sespesan;
+
 ?>
 
 <!DOCTYPE html>
@@ -135,6 +135,17 @@
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
       </form>
+      
+        <h2>yang menghubungi kami</h2>
+      <p>
+        NAMA : <strong><?php echo $sesnama ?></strong>.
+      </p> 
+      <p>
+        EMAIL : <strong><?php echo $sesemail ?></strong>.
+      </p>
+      <p>
+        PESAN : <strong><?php echo $sespesan ?></strong>.
+      </p>
     </section>
   </main>
 
