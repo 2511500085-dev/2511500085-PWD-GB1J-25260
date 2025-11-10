@@ -28,17 +28,33 @@
       <h2>Selamat Datang</h2>
       <?php
       echo "halo dunia!<br>";
-      echo "nama saya hadi";
+      echo "nama saya irsya";
       ?>
       <p>Ini contoh paragraf HTML.</p>
     </section>
 
     <section id="about">
       <?php
-      $nim = 2511500010;
-      $NIM = '0344300002';
-      $nama = "Say'yid Abdullah";
-      $Nama = 'Al\'kautar Benyamin';
+      $nim = 25115000012;
+      $NIM = "2511500085";
+      $nama = "eva";
+      $Nama = "irsya eva safitri";
+      $Tempatlahir = "BERANG"
+      $tempatlahir = "KUNDI"
+      $Tanggallahir = "15 juni 2007"
+      $tgllahir = "13 agustus 2007"
+      $hobi = "masak,game"
+      $Hobi = "memasak,bermain game"
+      $Pasangan = "ada"
+      $psngan = "tidak ada"
+      $pekerjaan = "mahasiswa"
+      $pkerjaan = "petani"
+      $namaorngtua = "papa : indra, mama : ratna susi"
+      $Namaorangtua = "ayah : indra dan ibu : rtana susi"
+      $namakakak = "felisha"
+      $Namakakak = "-"
+      $Namaadik = "syifanuraini"
+      $namaadik = "nuraini"
       ?>
       <h2>Tentang Saya</h2>
       <p><strong>NIM:</strong>
@@ -51,14 +67,43 @@
         echo $Nama;
         ?> &#128526;
       </p>
-      <p><strong>Tempat Lahir:</strong> Pangkalpinang</p>
-      <p><strong>Tanggal Lahir:</strong> 1 Januari 2000</p>
-      <p><strong>Hobi:</strong> Memasak, coding, dan bermain musik &#127926;</p>
-      <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
-      <p><strong>Pekerjaan:</strong> Dosen di ISB Atma Luhur &copy; 2025</p>
-      <p><strong>Nama Orang Tua:</strong> Bapak Setiawan dan Ibu Maria</p>
-      <p><strong>Nama Kakak:</strong> Antonius Setiawan</p>
-      <p><strong>Nama Adik:</strong> Christina Setiawan</p>
+      <p><strong>Tempat Lahir:</strong>
+        <?php 
+        echo $Tempatlahir;
+        ?>
+      </p>
+      <p><strong>Tanggal Lahir:</strong>
+        <?php 
+        echo $Tanggallahir; 
+        ?>
+      </p>
+      <p><strong>Hobi:</strong> 
+        <?php
+        echo $Hobi;
+        ?>
+      &#127926;</p>
+      <p><strong>Pasangan:</strong>
+        <?php
+        echo $Pasangan;
+        ?>
+      &hearts;</p>
+      <p><strong>Pekerjaan:</strong> 
+        <?php
+        echo $pekerjaan;
+        ?>
+       &copy; 2025</p>
+      <p><strong>Nama Orang Tua:</strong>
+        <?php 
+        echo $Namaorangtua; 
+        ?> </p>
+      <p><strong>Nama Kakak:</strong> 
+        <?php 
+        echo $Namakakak;
+        ?> </p>
+      <p><strong>Nama Adik:</strong>
+        <?php
+        echo $Namaadik
+        ?> </p>
     </section>
 
     <section id="contact">
