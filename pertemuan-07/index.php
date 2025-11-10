@@ -39,22 +39,22 @@
       $NIM = "2511500085";
       $nama = "eva";
       $Nama = "irsya eva safitri";
-      $Tempatlahir = "BERANG"
-      $tempatlahir = "KUNDI"
-      $Tanggallahir = "15 juni 2007"
-      $tgllahir = "13 agustus 2007"
-      $hobi = "masak,game"
-      $Hobi = "memasak,bermain game"
-      $Pasangan = "ada"
-      $psngan = "tidak ada"
-      $pekerjaan = "mahasiswa"
-      $pkerjaan = "petani"
-      $namaorngtua = "papa : indra, mama : ratna susi"
-      $Namaorangtua = "ayah : indra dan ibu : rtana susi"
-      $namakakak = "felisha"
-      $Namakakak = "-"
-      $Namaadik = "syifanuraini"
-      $namaadik = "nuraini"
+      $Tempatlahir = "BERANG";
+      $tempatlahir = "KUNDI";
+      $Tanggallahir = "15 juni 2007";
+      $tgllahir = "13 agustus 2007";
+      $hobi = "masak,game";
+      $Hobi = "memasak,bermain game";
+      $Pasangan = "ada";
+      $psngan = "tidak ada";
+      $pekerjaan = "mahasiswa";
+      $pkerjaan = "petani";
+      $namaorngtua = "papa : indra, mama : ratna susi";
+      $Namaorangtua = "ayah : indra dan ibu : rtana susi";
+      $namakakak = "felisha";
+      $Namakakak = "-";
+      $Namaadik = "syifanuraini";
+      $namaadik = "nuraini";
       ?>
       <h2>Tentang Saya</h2>
       <p><strong>NIM:</strong>
@@ -102,7 +102,7 @@
         ?> </p>
       <p><strong>Nama Adik:</strong>
         <?php
-        echo $Namaadik
+        echo $Namaadik;
         ?> </p>
     </section>
 
