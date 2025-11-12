@@ -136,25 +136,25 @@
             $nilaiAkhir5 = (0.2 * $nilaiHadir5) + (0.2 * $nilaiTugas5) + (0.3 * $nilaiUTS5) + (0.4 * $nilaiUAS5);
             
             #Nilai kehadiran < 70, otomatis Grade = E.
-            if ($nilaiHadir2 < 70): {
+            if ($nilaiHadir2 < 70): 
                 $grade2 = "A"
-            }endif;
+            endif;
 
-            if ($nilaiHadir2 < 70): {
+            if ($nilaiHadir2 < 70): 
                 $grade2 = "A"
-            }endif;
+            endif;
 
-            if ($nilaiHadir3 < 70): {
+            if ($nilaiHadir3 < 70): 
                 $grade3 = "A"
-            }endif;
+            endif;
 
-            if ($nilaiHadir4 < 70): {
+            if ($nilaiHadir4 < 70): 
                 $grade4 = "A"
-            }endif;
+            endif;
 
-            if ($nilaiHadir5 < 70): {
+            if ($nilaiHadir5 < 70): 
                 $grade5 = "A"
-            }endif;
+            endif;
 
             $mutu2 = "3.70";
             $mutu2 = "2.70";
