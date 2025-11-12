@@ -139,15 +139,19 @@
             if ($nilaiHadir2 < 70):
                 $grade2 = "A"
             endif;
+
             if ($nilaiHadir2 < 70):
                 $grade2 = "A"
             endif;
+
             if ($nilaiHadir3 < 70):
                 $grade3 = "A"
             endif;
+
             if ($nilaiHadir4 < 70):
                 $grade4 = "A"
             endif;
+            
             if ($nilaiHadir5 < 70):
                 $grade5 = "A"
             endif;
