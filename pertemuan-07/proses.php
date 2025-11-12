@@ -6,5 +6,5 @@
     $_SESSION["sesnama"] = $sesnama;
     $_SESSION["sesemail"] = $sesemail;
     $_SESSION["sespesan"] = $sespesan;
-    header("location: index.php");
+    #header("location: index.php");
 ?>
