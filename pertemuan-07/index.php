@@ -58,7 +58,7 @@
       $pekerjaan = "mahasiswa";
       $pkerjaan = "petani";
       $namaorngtua = "papa : indra, mama : ratna susi";
-      $Namaorangtua = "ayah : indra dan ibu : rtana susi";
+      $Namaorangtua = "ayah : indra dan ibu : ratna susi";
       $namakakak = "felisha";
       $Namakakak = "-";
       $Namaadik = "syifanuraini";
