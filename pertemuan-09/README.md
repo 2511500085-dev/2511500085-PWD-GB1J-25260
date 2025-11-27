@@ -15,4 +15,5 @@
   <li>menghapus $_SESSION menggantikan dengan $arrBiodata</li>
   <li>menghapus $txtnim dll menggantikan dengan $biodata</li>
   <li>menambahkan php di section about</li> 
+  <li>menambahkan file fungsi.php dan mengisi kode di file fungsi.php</li>
 </ol>
