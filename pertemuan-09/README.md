@@ -11,4 +11,8 @@
   <li>tangkap session dari file proses selesai</li>
   <li>echo session ke nilai label section contact</li>
   <li>echo session ke nilai label section contact selesai</li>
+  <li>mengubah POST ke array</li>
+  <li>menghapus $_SESSION menggantikan dengan $arrBiodata</li>
+  <li>menghapus $txtnim dll menggantikan dengan $biodata</li>
+  <li>menambahkan php di section about</li> 
 </ol>

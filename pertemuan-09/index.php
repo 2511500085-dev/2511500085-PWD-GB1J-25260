@@ -118,6 +118,12 @@ $fieldConfig = [
 
     <section id="about">
       <h2>Tentang Saya</h2>
+      <?php foreach ($fieldconfig as $kunci => $metadata): ?>
+        <p> 
+          <strong><?= $metadata["label"] ?></strong>
+          <?= htmlspecialchars($biodata[$kunci] ?? "") ?>
+          <?= $metadata["suffix"]?>
+          
       <p><strong>NIM:</strong> <?= $txtNim ?></p>
       <p><strong>Nama Lengkap:</strong> <?= $txtNmLengkap ?> &#128526;</p>
       <p><strong>Tempat Lahir:</strong> <?= $txtT4Lhr ?></p>
