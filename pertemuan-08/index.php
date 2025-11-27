@@ -12,9 +12,9 @@ if (isset($_SESSION["sesNama"])):
   $sesNama = $_SESSION["sesNama"];
 endif;
 
-$sesemail = "";
-if (isset($_SESSION["sesemail"])):
-  $sesemail = $_SESSION["sesemail"];
+$sesEmail = "";
+if (isset($_SESSION["sesEmail"])):
+  $seEemail = $_SESSION["sesEmail"];
 endif;
 
 $sesTempatlahir = "";
@@ -159,8 +159,8 @@ endif;
       <?php
       $nim = "25115000012";
       $NIM = "2511500085";
-      $email = "irsya@gmail.com"
-      $Email = "wilian@gmail.com"
+      $email = "irsya@gmail.com";
+      $Email = "wilian@gmail.com";
       $nama = "eva";
       $Nama = "irsya eva safitri";
       $Tempatlahir = "BERANG";
