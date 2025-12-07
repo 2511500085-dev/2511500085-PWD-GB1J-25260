@@ -18,4 +18,5 @@
   <li>menambahkan file fungsi.php dan mengisi kode di file fungsi.php</li>
   <li>menambahkan format tanggal pada fungsi.php</li>
   <li>menambahkan fungsi parameter</li>
+  <li>mengganti kode di bagian index.php dengan 1 baris</li>
 </ol>
