@@ -16,4 +16,5 @@
   <li>menghapus $txtnim dll menggantikan dengan $biodata</li>
   <li>menambahkan php di section about</li> 
   <li>menambahkan file fungsi.php dan mengisi kode di file fungsi.php</li>
+  <li>menambahkan format tanggal pada fungsi.php</li>
 </ol>
