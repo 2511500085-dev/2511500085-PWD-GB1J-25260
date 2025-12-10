@@ -15,5 +15,6 @@ hari ini saya belajar :
 <li> menambahkan create atau insert record untuk tbl_tamu sbnyak 3 kali</li>
 <li> meengcopy read.php lalu rename jadi read_inc.php</li>
 <li> menambahkan beberapa kode unutk read_inc.php</li>
+<li> mengubah kode di index.php dengan kode baru</li>
 
 
