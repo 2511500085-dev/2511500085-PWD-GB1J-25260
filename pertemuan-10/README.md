@@ -12,6 +12,8 @@ hari ini saya belajar :
 <li> membuat table pada database sql di phpmyadmin</li>
 <li> membuat file baru yaitu read.php</li>
 <li> menambahkan kode di read.php</li>
-
+<li> menambahkan create atau insert record untuk tbl_tamu sbnyak 3 kali</li>
+<li> meengcopy read.php lalu rename jadi read_inc.php</li>
+<li> menambahkan beberapa kode unutk read_inc.php</li>
 
 
