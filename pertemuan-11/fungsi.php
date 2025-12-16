@@ -1,5 +1,5 @@
 <?php
-function bersihkan($str)
+function bersihkan($url)
 {
   header("location: " . $url);
   exit();
