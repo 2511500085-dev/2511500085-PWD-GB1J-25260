@@ -6,7 +6,14 @@ $arrContact = [
   "email" => $_POST["txtEmail"] ?? "",
   "pesan" => $_POST["txtPesan"] ?? ""
 ];
-$_SESSION["contact"] = $arrContact;
+if($_SERVER["REQUEST_METHOD"] === "POST") {
+  $_SESSION["flash_error"] = 'Akses tidak valid.';
+  redirect_ke('index.php#contact');
+}
+
+$nama = bersihkan($_POST['txtNama'] ?? '');
+$email = bersihkan($_POST['txtEmail'] ?? '');
+$email = bersihkan($_POST['txtPesan'] ?? '');
 
 $arrBiodata = [
   "nim" => $_POST["txtNim"] ?? "",
