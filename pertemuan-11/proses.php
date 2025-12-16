@@ -40,6 +40,8 @@ if (!empty($errors)) {
   redirect_ke('index.php#contact');
 }
 
+mysqli_stmt_close($stmt);
+
 
 $arrBiodata = [
   "nim" => $_POST["txtNim"] ?? "",
