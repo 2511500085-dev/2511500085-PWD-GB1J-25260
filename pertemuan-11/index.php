@@ -150,13 +150,16 @@ require_once __DIR__ . '/fungsi.php';
           required><?= isset($old['pesan']) ? htmlspecialchars($old['pesan']) : '' ?></textarea>
           <small id="charCount">0/200 karakter</small>
         </label>
+        
+          <label>
+          <span>Berapa hasil 2 + 3?</span>
+          <input type="text" name="captcha" required>
+        </label>
 
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
       </form>
-      
-      
-      
+            
       <h2>Yang menghubungi kami</h2>
 
       <?= include 'read_inc.php';?>
