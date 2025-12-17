@@ -34,7 +34,7 @@ if (!empty($errors)) {
 }
 
 // menyiapkan query INSERT dengan prepared statement
-$sql = "INSERT INTO tbl_tamu (cnama, cemail, cpesan) VALUES (?, ?, ?)";
+$sql = "INSERT INTO tbl_tamu (cnama, cmail, cpesan) VALUES (?, ?, ?)";
 $stmt = mysqli_prepare($conn, $sql);
 if (!$stmt) {
     $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
