@@ -13,7 +13,7 @@ $cid = filter_input(INPUT_POST, 'cid', FILTER_VALIDATE_INT, [
 ]);
 
 if (!$cid) {
-    $_SESSION['flash_error'] = 'akses tidak valid.';
+    $_SESSION['flash_error'] = 'CID tidak valid.';
     redirect_ke('edit.php?cid='.(int)$cid);
 }
 
@@ -36,10 +36,10 @@ if ($pesan === '') {
 if ($captcha === '') {
     $errors[] = 'jawaban captcha salah.';
 }
-if (mb_strlen($nama) < 3) {
+if (mb_strlen($cnama) < 3) {
     $errors[] = 'nama minimal 3 karakter.';
 }
-if (mb_strlen($pesan) < 10) {
+if (mb_strlen($cpesan) < 10) {
     $errors[] = 'pesan minimal 10 karakter.';
 }
 if ((int)$captcha !== 6) {
@@ -67,8 +67,7 @@ if (!$stmt) {
 mysqli_stmt_bind_param($stmt, "sssi", $cnama, $cmail, $cpesan, $cid);
 
 if (mysqli_stmt_execute($stmt)) {
-    mysqli_stmt_close($stmt);
-    unset ($_SESSION['old']);
+unset ($_SESSION['old']);
     $_SESSION['flash_sukses'] = 'terimakasih data anda sudah diperbaharui.';
     redirect_ke('read.php');
 } else {
@@ -82,4 +81,3 @@ if (mysqli_stmt_execute($stmt)) {
 }
 mysqli_stmt_close($stmt);
 redirect_ke('edit.php?cid='.(int)$cid);
-   

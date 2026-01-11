@@ -4,7 +4,7 @@
     require 'fungsi.php';
 
     $cid = filter_input(INPUT_GET, 'cid', FILTER_VALIDATE_INT,[
-    'options' => ['min_range' => 1];
+    'options' => ['min_range' => 1] 
     ]);
 
     if (!$cid) {
