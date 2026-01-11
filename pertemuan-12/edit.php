@@ -95,8 +95,19 @@
                          required><?= !empty($pesan) ? $pesan : '' ?></textarea>
                         </label>
 
+                        <label for="txtCaptcha"><span>Captcha 2 x 3 = ?</span>
+                        <input type="number" id="txtCaptcha" name="txtCaptcha"
+                        placeholder="jawab pertanyaan..." required>
+                        </label>
+
                     <div>
-                        <button type="submit">Update</button>
+                        <button type="submit">kirim</button>
+                        <button type="reset">hapus</button>
+                        <a href="read.php" class="reset">kembali</a>
                     </div>
                 </form>
-            
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
