@@ -6,5 +6,7 @@ nim : 2511500085
 
 <ol>
 <li>meng extrak sqlpertemuan 13</li>
-<li>menambah kata delete di file proses_update.php</li>
+<li>menambah kata delete di file read php 'proses_delete.php'</li>
+<li>copas file update.php ke delete.php</li>
+
 </ol>
