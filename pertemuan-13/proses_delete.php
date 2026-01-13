@@ -2,7 +2,7 @@
   session_start();
   require __DIR__ . './koneksi.php';
   require_once __DIR__ . '/fungsi.php';
-  
+
 
   #validasi cid wajib angka dan > 0
 //   $cid = filter_input(INPUT_POST, 'cid', FILTER_VALIDATE_INT, [
@@ -41,4 +41,4 @@
   #tutup statement
   mysqli_stmt_close($stmt);
 
-  redirect_ke('readd.php');
+  redirect_ke('read.php');

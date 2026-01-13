@@ -9,4 +9,5 @@ nim : 2511500085<br>
 <li>menambah kata delete di file read php 'proses_delete.php'</li>
 <li>copas file update.php ke delete.php</li>
 <li>menambahkan kode untuk delete/menghapus from tbl_tamu</li>
+<li>menambahkan parameter cid untuk link delete di read.php</li>
 </ol>
