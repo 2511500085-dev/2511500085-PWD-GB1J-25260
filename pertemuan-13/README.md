@@ -10,4 +10,5 @@ nim : 2511500085<br>
 <li>copas file update.php ke delete.php</li>
 <li>menambahkan kode untuk delete/menghapus from tbl_tamu</li>
 <li>menambahkan parameter cid untuk link delete di read.php</li>
+<li>memperbaiki file proses_delete.php agar menggunakan parameter cid</li>
 </ol>
