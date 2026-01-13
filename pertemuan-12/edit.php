@@ -3,7 +3,7 @@ session_start();
 require 'koneksi.php';
 require 'fungsi.php';
 
-// Ambil ID dari GET
+
 $cid = filter_input(INPUT_GET, 'cid', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
 ]);
@@ -14,7 +14,7 @@ if (!$cid) {
     exit;
 }
 
-// Ambil data dari database
+
 $stmt = mysqli_prepare(
     $conn,
     "SELECT cid, cnama, cemail, cpesan
@@ -24,13 +24,15 @@ $stmt = mysqli_prepare(
 );
 
 if (!$stmt) {
-    die("Query error: " . mysqli_error($conn)); // Debug MySQL asli
+    $_SESSION['flash_error'] = "Query tidak benar";
+    redirect_ke('read.php');
+    exit;
 }
 
 mysqli_stmt_bind_param($stmt, "i", $cid);
 mysqli_stmt_execute($stmt);
 $res = mysqli_stmt_get_result($stmt);
-$data = mysqli_fetch_assoc($res);
+$data   = mysqli_fetch_assoc($res);
 mysqli_stmt_close($stmt);
 
 if (!$data) {
@@ -39,21 +41,22 @@ if (!$data) {
     exit;
 }
 
-// Ambil data dari DB
+/* data dari DB */
 $nama  = $data['cnama'];
 $email = $data['cemail'];
 $pesan = $data['cpesan'];
 
-// Flash & old input
+/* flash & old */
 $flash_error = $_SESSION['flash_error'] ?? '';
 $old = $_SESSION['old'] ?? [];
 unset($_SESSION['flash_error'], $_SESSION['old']);
 
+/* jika redirect karena error */
 if (!empty($old)) {
-    $nama    = $old['txtNamaEd'] ?? $nama;
-    $email   = $old['txtEmailEd'] ?? $email;
-    $pesan   = $old['txtPesanEd'] ?? $pesan;
-    $captcha = $old['txtCaptcha'] ?? '';
+    $nama    = $old['nama']    ?? $nama;
+    $email   = $old['email']   ?? $email;
+    $pesan   = $old['pesan']   ?? $pesan;
+    $captcha = $old['captcha'] ?? '';
 } else {
     $captcha = '';
 }
@@ -69,7 +72,7 @@ if (!empty($old)) {
 <body>
 
 <header>
-    <h1>Edit Buku Tamu</h1>
+    <h1>Ini Header</h1>
     <nav>
         <ul>
             <li><a href="index.php">Beranda</a></li>
@@ -80,14 +83,17 @@ if (!empty($old)) {
 </header>
 
 <main id="contact">
+    <h2>Edit Buku Tamu</h2>
+
     <?php if (!empty($flash_error)) : ?>
         <div style="padding:10px;background:#f8d7da;color:#721c24;border-radius:6px;margin-bottom:10px;">
-            <?= htmlspecialchars($flash_error) ?>
+            <?= $flash_error ?>
         </div>
     <?php endif; ?>
 
     <form action="proses_update.php" method="POST">
-        <input type="hidden" name="cid" value="<?= (int)$cid ?>">
+
+        <input type="txt" name="cid" value="<?= (int)$cid ?>">
 
         <label>
             <span>Nama:</span>
@@ -115,6 +121,7 @@ if (!empty($old)) {
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
         <a href="read.php" class="reset">Kembali</a>
+
     </form>
 </main>
 
