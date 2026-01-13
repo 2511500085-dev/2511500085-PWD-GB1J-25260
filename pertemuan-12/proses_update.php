@@ -42,7 +42,7 @@ if (mb_strlen($cnama) < 3) {
 if (mb_strlen($cpesan) < 10) {
     $errors[] = 'pesan minimal 10 karakter.';
 }
-if ((int)$captcha !== 6) {
+if ((int)$captcha !== 1) {
     $errors[] = 'jawaban '. $captcha. 'captcha salah';
 }
 
@@ -57,7 +57,7 @@ if (!empty($errors)) {
 }
 
 $stmt = mysqli_prepare($conn, "UPDATE tbl_tamu 
-                                SET cnama = ?, cmail = ?, cpesan = ?
+                                SET cnama = ?, cemail = ?, cpesan = ?
                                 WHERE cid = ?");
 if (!$stmt) {
     $_SESSION['flash_error'] = 'query tidak benar.';

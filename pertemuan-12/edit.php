@@ -1,113 +1,122 @@
-<?php 
-    session_start();
-    require 'koneksi.php';
-    require 'fungsi.php';
+<?php
+session_start();
+require 'koneksi.php';
+require 'fungsi.php';
 
-    $cid = filter_input(INPUT_GET, 'cid', FILTER_VALIDATE_INT,[
-    'options' => ['min_range' => 1] 
-    ]);
+// Ambil ID dari GET
+$cid = filter_input(INPUT_GET, 'cid', FILTER_VALIDATE_INT, [
+    'options' => ['min_range' => 1]
+]);
 
-    if (!$cid) {
-        $_SESSION['flash_error'] = 'akses tidak valid.';
-        redirect_ke('read.php');
-    }
+if (!$cid) {
+    $_SESSION['flash_error'] = "Akses tidak valid";
+    redirect_ke('read.php');
+    exit;
+}
 
-    $stmt = mysqli_prepare($conn, "SELECT cid,cnama,cmail,cpesan 
-                                    FROM tbl_tamu WHERE cid = ? LIMIT 1");
-    if (!$stmt) {
-        $_SESSION['flash_error'] = 'queery tidak benar.';
-        redirect_ke('read.php');
-    }
-    mysqli_stmt_bind_param($stmt, "i", $cid);
-    mysqli_stmt_execute($stmt);
-    $res = mysqli_stmt_get_result($stmt);
-    $row = mysqli_fetch_assoc($res);
-    mysqli_stmt_close($stmt);
+// Ambil data dari database
+$stmt = mysqli_prepare(
+    $conn,
+    "SELECT cid, cnama, cemail, cpesan
+     FROM tbl_tamu
+     WHERE cid = ?
+     LIMIT 1"
+);
 
-    if (!$row) {
-        $_SESSION['flash_error'] = 'record tidak ditemukan.';
-        redirect_ke('read.php');
-    }
+if (!$stmt) {
+    die("Query error: " . mysqli_error($conn)); // Debug MySQL asli
+}
 
-    $cnama = $row['cnama'] ?? '';
-    $cmail = $row['cmail'] ?? '';
-    $cpesan = $row['cpesan'] ?? '';
+mysqli_stmt_bind_param($stmt, "i", $cid);
+mysqli_stmt_execute($stmt);
+$res = mysqli_stmt_get_result($stmt);
+$data = mysqli_fetch_assoc($res);
+mysqli_stmt_close($stmt);
 
-    $flash_error = $_SESSION['flash_error'] ?? '';
-    $old = $_SESSION['old'] ?? [];
-    unset($_SESSION['flash_error'], $_SESSION['old']);
-    if (!empty($old)) {
-        $cnama = $old['cnama'] ?? $cnama;
-        $cmail = $old['cmail'] ?? $cmail;
-        $cpesan = $old['cpesan'] ?? $cpesan;
-    }
+if (!$data) {
+    $_SESSION['flash_error'] = "Data tidak ditemukan";
+    redirect_ke('read.php');
+    exit;
+}
+
+// Ambil data dari DB
+$nama  = $data['cnama'];
+$email = $data['cemail'];
+$pesan = $data['cpesan'];
+
+// Flash & old input
+$flash_error = $_SESSION['flash_error'] ?? '';
+$old = $_SESSION['old'] ?? [];
+unset($_SESSION['flash_error'], $_SESSION['old']);
+
+if (!empty($old)) {
+    $nama    = $old['txtNamaEd'] ?? $nama;
+    $email   = $old['txtEmailEd'] ?? $email;
+    $pesan   = $old['txtPesanEd'] ?? $pesan;
+    $captcha = $old['txtCaptcha'] ?? '';
+} else {
+    $captcha = '';
+}
 ?>
-
 <!DOCTYPE html>
 <html lang="id">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>judul halaman</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <h1>ini header</h1>
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation" >
-                &#9776;
-            </button>
-            <nav>
-                <ul>
-                    <li><a href="#home">Beranda</a></li>
-                    <li><a href="#about">Tentang</a></li>
-                    <li><a href="#contact">Kontak</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section id="contact">
-                <h2>Edit Data Tamu</h2>
-                <?php if (!empty($flash_error)): ?>
-                    <div style="padding:10px; margin-bottom:10px;
-                    background:#f8d7da; color:#721c24; border-radius:6px;">
-                        <?=$flash_error;?>
-                    </div>
-                <?php endif; ?>
-                <form action="proses_update.php" method="POST">
-                    <input type="text" name="cid" value="<?= (int)$cid; ?>">
-        
-                        <label for="txtNama"><span>Nama:</span>
-                        <input type="text" id="txtNama" name="txtNamaEd"
-                        placeholder="masukkan nama"  required autocomplete="name"
-                         value="<?= !empty($nama) ? $nama :'' ?> ">
-                        </label>
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Buku Tamu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-                        <label for="txtEmail"><span>Email:</span>
-                        <input type="Email" id="txtEmail" name="txtEmailEd"
-                        placeholder="masukkan email" required autocomplete="email"
-                         value="<?= !empty($email) ? $email :'' ?>">
-                        </label>
+<header>
+    <h1>Edit Buku Tamu</h1>
+    <nav>
+        <ul>
+            <li><a href="index.php">Beranda</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
 
-                        <label for="txtPesan"><span>Pesan:</span>
-                        <textarea id="txtPesan" name="txtPesanEd" rows="4"
-                        placeholder= "tulis pesan anda..."
-                         required><?= !empty($pesan) ? $pesan : '' ?></textarea>
-                        </label>
+<main id="contact">
+    <?php if (!empty($flash_error)) : ?>
+        <div style="padding:10px;background:#f8d7da;color:#721c24;border-radius:6px;margin-bottom:10px;">
+            <?= htmlspecialchars($flash_error) ?>
+        </div>
+    <?php endif; ?>
 
-                        <label for="txtCaptcha"><span>Captcha 2 x 3 = ?</span>
-                        <input type="number" id="txtCaptcha" name="txtCaptcha"
-                        placeholder="jawab pertanyaan..." required>
-                        </label>
+    <form action="proses_update.php" method="POST">
+        <input type="hidden" name="cid" value="<?= (int)$cid ?>">
 
-                    <div>
-                        <button type="submit">kirim</button>
-                        <button type="reset">hapus</button>
-                        <a href="read.php" class="reset">kembali</a>
-                    </div>
-                </form>
-            </section>
-        </main>
-        <script src="script.js"></script>
-    </body>
+        <label>
+            <span>Nama:</span>
+            <input type="text" name="txtNamaEd" required
+                   value="<?= htmlspecialchars($nama) ?>">
+        </label>
+
+        <label>
+            <span>Email:</span>
+            <input type="email" name="txtEmailEd" required
+                   value="<?= htmlspecialchars($email) ?>">
+        </label>
+
+        <label>
+            <span>Pesan Anda:</span>
+            <textarea name="txtPesanEd" rows="4" required><?= htmlspecialchars($pesan) ?></textarea>
+        </label>
+
+        <label>
+            <span>Captcha 1 x 1 = ?</span>
+            <input type="number" name="txtCaptcha" required
+                   value="<?= htmlspecialchars($captcha) ?>">
+        </label>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+        <a href="read.php" class="reset">Kembali</a>
+    </form>
+</main>
+
+</body>
 </html>

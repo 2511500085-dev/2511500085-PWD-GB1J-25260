@@ -42,9 +42,9 @@ if (!$q) {
             <td><a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a></td>
             <td><?= $row['cid']; ?></td>
             <td><?= htmlspecialchars($row['cnama']); ?></td>
-            <td><?= htmlspecialchars($row['cmail']); ?></td>
+            <td><?= htmlspecialchars($row['cemail']); ?></td>
             <td><?= nl2br(htmlspecialchars($row['cpesan'])); ?></td>
-            <td><?= $row['created_at']; ?></td>
+            <td><?= $row['dcreated_at']; ?></td>
         </tr>
   
     <?php endwhile; ?>
