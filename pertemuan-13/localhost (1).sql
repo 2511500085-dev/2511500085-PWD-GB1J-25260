@@ -29,7 +29,7 @@ USE `db_pwd2025`;
 -- Table structure for table `tbl_tamu`
 --
 
-CREATE TABLE `tbl_mahasiswa` (
+CREATE TABLE `tbl_tamu` (
   `cid` int NOT NULL,
   `cnama` varchar(100) DEFAULT NULL,
   `cemail` varchar(100) DEFAULT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE `tbl_mahasiswa` (
 -- Dumping data for table `tbl_tamu`
 --
 
-INSERT INTO `tbl_mahasiswa` (`cid`, `cnama`, `cemail`, `cpesan`, `dcreated_at`) VALUES
+INSERT INTO `tbl_tamu` (`cid`, `cnama`, `cemail`, `cpesan`, `dcreated_at`) VALUES
 (1, 'Yohanes Setiawan Japriadi', 'ysetiawanj@atmaluhur.ac.id', 'Ayo yang teliti belajar pemrograman web dasarnya, jangan membiasakan typo', '2025-12-16 11:00:25'),
 (2, 'Gracella Edrea Japriadi', 'cellajapriadi@gmail.com', 'ayo kakak-kakak yang semangat belajarnya', '2025-12-16 11:00:25'),
 (3, 'Wulan Dari Belinyu', 'wulanbly@gmail.com', 'aku pasti menang', '2025-12-16 11:00:25'),
@@ -64,7 +64,7 @@ INSERT INTO `tbl_mahasiswa` (`cid`, `cnama`, `cemail`, `cpesan`, `dcreated_at`) 
 --
 -- Indexes for table `tbl_tamu`
 --
-ALTER TABLE `tbl_mahasiswa`
+ALTER TABLE `tbl_tamu`
   ADD PRIMARY KEY (`cid`);
 
 --
@@ -74,7 +74,7 @@ ALTER TABLE `tbl_mahasiswa`
 --
 -- AUTO_INCREMENT for table `tbl_tamu`
 --
-ALTER TABLE `tbl_mahasiswa`
+ALTER TABLE `tbl_tamu`
   MODIFY `cid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 

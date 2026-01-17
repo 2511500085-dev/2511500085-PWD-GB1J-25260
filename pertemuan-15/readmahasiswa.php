@@ -53,7 +53,7 @@
       <td><?= htmlspecialchars($row['cnama']); ?></td>
       <td><?= htmlspecialchars($row['cemail']); ?></td>
       <td><?= nl2br(htmlspecialchars($row['cpesan'])); ?></td>
-      <td><?= formatTanggal(htmlspecialchars($row['dcreated_at'])); ?></td>
+      <td><?= $row['dcreated_at']; ?></td> 
     </tr>
   <?php endwhile; ?>
 </table>

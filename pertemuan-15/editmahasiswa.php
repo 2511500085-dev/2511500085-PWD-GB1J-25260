@@ -31,7 +31,7 @@
   */
   if (!$cid) {
     $_SESSION['flash_error'] = 'Akses tidak valid.';
-    redirect_ke('read.php');
+    redirect_ke('readmahasiswa.php');
   }
 
   /*
@@ -39,10 +39,10 @@
     jika ada kesalahan, tampilkan penanda error.
   */
   $stmt = mysqli_prepare($conn, "SELECT cid, cnama, cemail, cpesan 
-                                    FROM tbl_tamu WHERE cid = ? LIMIT 1");
+                                    FROM tbl_mahasiswa WHERE cid = ? LIMIT 1");
   if (!$stmt) {
     $_SESSION['flash_error'] = 'Query tidak benar.';
-    redirect_ke('read.php');
+    redirect_ke('readmahasiswa.php');
   }
 
   mysqli_stmt_bind_param($stmt, "i", $cid);
@@ -53,7 +53,7 @@
 
   if (!$row) {
     $_SESSION['flash_error'] = 'Record tidak ditemukan.';
-    redirect_ke('read.php');
+    redirect_ke('readmahasiswa.php');
   }
 
   #Nilai awal (prefill form)
@@ -133,7 +133,7 @@
 
           <button type="submit">Kirim</button>
           <button type="reset">Batal</button>
-          <a href="read.php" class="reset">Kembali</a>
+          <a href="readmahasiswa.php" class="reset">Kembali</a>
         </form>
       </section>
     </main>

@@ -11,7 +11,7 @@
 
   if (!$cid) {
     $_SESSION['flash_error'] = 'CID Tidak Valid.';
-    redirect_ke('read.php');
+    redirect_ke('readmahasiswa.php');
   }
 
   /*
@@ -19,12 +19,12 @@
     menyiapkan query UPDATE dengan prepared statement 
     (WAJIB WHERE cid = ?)
   */
-  $stmt = mysqli_prepare($conn, "DELETE FROM tbl_tamu
+  $stmt = mysqli_prepare($conn, "DELETE FROM tbl_mahasiswa
                                  WHERE cid = ?");
   if (!$stmt) {
     #jika gagal prepare, kirim pesan error (tanpa detail sensitif)
     $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
-    redirect_ke('read.php');
+    redirect_ke('readmahasiswa.php');
   }
 
   #bind parameter dan eksekusi (s = string, i = integer)
@@ -41,4 +41,4 @@
   #tutup statement
   mysqli_stmt_close($stmt);
 
-  redirect_ke('read.php');
+  redirect_ke('readmahasiswa.php');
