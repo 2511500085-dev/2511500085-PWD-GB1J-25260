@@ -6,7 +6,7 @@
   #cek method form, hanya izinkan POST
   if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     $_SESSION['flash_error'] = 'Akses tidak valid.';
-    redirect_ke('read.php');
+    redirect_ke('readmahasiswa.php');
   }
 
   #validasi cid wajib angka dan > 0
@@ -16,7 +16,7 @@
 
   if (!$cid) {
     $_SESSION['flash_error'] = 'CID Tidak Valid.';
-    redirect_ke('edit.php?cid='. (int)$cid);
+    redirect_ke('editmahasiswa.php?cid='. (int)$cid);
   }
 
   #ambil dan bersihkan (sanitasi) nilai dari form
@@ -70,7 +70,7 @@
     ];
 
     $_SESSION['flash_error'] = implode('<br>', $errors);
-    redirect_ke('edit.php?cid='. (int)$cid);
+    redirect_ke('editmahasiswa.php?cid='. (int)$cid);
   }
 
   /*
@@ -84,7 +84,7 @@
   if (!$stmt) {
     #jika gagal prepare, kirim pesan error (tanpa detail sensitif)
     $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
-    redirect_ke('edit.php?cid='. (int)$cid);
+    redirect_ke('editmahasiswa.php?cid='. (int)$cid);
   }
 
   #bind parameter dan eksekusi (s = string, i = integer)
@@ -96,7 +96,7 @@
       Redirect balik ke read.php dan tampilkan info sukses.
     */
     $_SESSION['flash_sukses'] = 'Terima kasih, data Anda sudah diperbaharui.';
-    redirect_ke('read.php'); #pola PRG: kembali ke data dan exit()
+    redirect_ke('readmahasiswa.php'); #pola PRG: kembali ke data dan exit()
   } else { #jika gagal, simpan kembali old value dan tampilkan error umum
     $_SESSION['old'] = [
       'nama'  => $nama,
@@ -104,9 +104,9 @@
       'pesan' => $pesan,
     ];
     $_SESSION['flash_error'] = 'Data gagal diperbaharui. Silakan coba lagi.';
-    redirect_ke('edit.php?cid='. (int)$cid);
+    redirect_ke('editmahasiswa.php?cid='. (int)$cid);
   }
   #tutup statement
   mysqli_stmt_close($stmt);
 
-  redirect_ke('edit.php?cid='. (int)$cid);
+  redirect_ke('editmahasiswa.php?cid='. (int)$cid);
