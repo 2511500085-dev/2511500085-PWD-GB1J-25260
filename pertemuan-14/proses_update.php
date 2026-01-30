@@ -20,10 +20,16 @@
   }
 
   #ambil dan bersihkan (sanitasi) nilai dari form
-  $nama  = bersihkan($_POST['txtNamaEd']  ?? '');
-  $email = bersihkan($_POST['txtEmailEd'] ?? '');
-  $pesan = bersihkan($_POST['txtPesanEd'] ?? '');
-  $captcha = bersihkan($_POST['txtCaptcha'] ?? '');
+  $kodepengunjung = bersihkan ($_POST['txtKodePen'] ?? '' );
+  $namapengunjung = bersihkan ($_POST['txtNmPengunjung'] ?? '');
+  $alamatrumah = bersihkan ($_POST['txtAlRmh'] ?? '');
+  $tanggalkunjungan = bersihkan ($_POST['txtTglKunjungan'] ?? '');
+  $hobi = bersihkan ($_POST['txtHobi'] ?? '');
+  $asalSLTA = bersihkan ($_POST['txtAsalSMA'] ?? '');
+  $pekerjaan = bersihkan ($_POST['txtKerja'] ?? '');
+  $namaorangtua =  bersihkan ($_POST['txtNmOrtu'] ?? '');
+  $namapacar = berrsihkan ($_POST['txtNmPacar'] ?? '');
+  $namamantan = bersihkan ($_POST['txtNmMantan'] ?? '');
 
   #Validasi sederhana
   $errors = []; #ini array untuk menampung semua error yang ada
@@ -64,9 +70,16 @@
   */
   if (!empty($errors)) {
     $_SESSION['old'] = [
-      'nama'  => $nama,
-      'email' => $email,
-      'pesan' => $pesan
+    'kodepengunjung'  => $kodepengunjung,
+    'namapengunjung' => $namapengunjung,
+    'alamatrumah' => $alamatrumah,
+    'tanggalkunjungan' => $tanggalkunjungan,
+    'hobi' => $hobi,
+    'asalSLTA' => $asalSLTA,
+    'pekerjaan' => $pekerjaan,
+    'namaorangtua' => $namaorangtua,
+    'namapacar' => $namapacar,
+    'namamantan' => $namamantan,
     ];
 
     $_SESSION['flash_error'] = implode('<br>', $errors);
@@ -78,8 +91,8 @@
     menyiapkan query UPDATE dengan prepared statement 
     (WAJIB WHERE cid = ?)
   */
-  $stmt = mysqli_prepare($conn, "UPDATE tbl_tamu 
-                                SET cnama = ?, cemail = ?, cpesan = ? 
+  $stmt = mysqli_prepare($conn, "UPDATE tbl_pengunjung
+                                SET kodepengunjung = ?, namapengunjung = ?, alamatrumah = ? tanggalkunjungan = ? hobi = ? asalSLTA = ? pekerjaan = ? namaorangtua = ? namapacar = ? namamantan = ?
                                 WHERE cid = ?");
   if (!$stmt) {
     #jika gagal prepare, kirim pesan error (tanpa detail sensitif)
@@ -88,7 +101,7 @@
   }
 
   #bind parameter dan eksekusi (s = string, i = integer)
-  mysqli_stmt_bind_param($stmt, "sssi", $nama, $email, $pesan, $cid);
+  mysqli_stmt_bind_param($stmt, "sssi",$kodepengunjung, $namapengunjung, $alamatrumah, $tanggalkunjungan, $hobi, $asalSLTA, $pekerjaan, $namaorangtua, $namapacar, $namamantan);
 
   if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value
     unset($_SESSION['old']);
@@ -99,9 +112,16 @@
     redirect_ke('read.php'); #pola PRG: kembali ke data dan exit()
   } else { #jika gagal, simpan kembali old value dan tampilkan error umum
     $_SESSION['old'] = [
-      'nama'  => $nama,
-      'email' => $email,
-      'pesan' => $pesan,
+    'kodepengunjung'  => $kodepengunjung,
+    'namapengunjung' => $namapengunjung,
+    'alamatrumah' => $alamatrumah,
+    'tanggalkunjungan' => $tanggalkunjungan,
+    'hobi' => $hobi,
+    'asalSLTA' => $asalSLTA,
+    'pekerjaan' => $pekerjaan,
+    'namaorangtua' => $namaorangtua,
+    'namapacar' => $namapacar,
+    'namamantan' => $namamantan,
     ];
     $_SESSION['flash_error'] = 'Data gagal diperbaharui. Silakan coba lagi.';
     redirect_ke('edit.php?cid='. (int)$cid);

@@ -36,10 +36,16 @@
     <th>No</th>
     <th>Aksi</th>
     <th>ID</th>
-    <th>Nama</th>
-    <th>Email</th>
-    <th>Pesan</th>
-    <th>Created At</th>
+    <th>kode pengunjung</th>
+    <th>nama pengunjung</th>
+    <th>alamat rumah</th>
+    <th>tanggal kunjungan</th>
+    <th>hobi</th>
+    <th>asal SLTA</th>
+    <th>pekerjaan</th>
+    <th>nama orang tua</th>
+    <th>nama pacar</th>
+    <th>nama mantan</th>
   </tr>
   <?php $i = 1; ?>
   <?php while ($row = mysqli_fetch_assoc($q)): ?>
@@ -47,13 +53,20 @@
       <td><?= $i++ ?></td>
       <td>
         <a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
-        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['cnama']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
+        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['namapengunjung']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
       </td>
       <td><?= $row['cid']; ?></td>
-      <td><?= htmlspecialchars($row['cnama']); ?></td>
-      <td><?= htmlspecialchars($row['cemail']); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['cpesan'])); ?></td>
-      <td><?= formatTanggal(htmlspecialchars($row['dcreated_at'])); ?></td>
+      <td><?= htmlspecialchars($row['kodepengunjung']); ?></td>
+      <td><?= htmlspecialchars($row['namapengunjung']); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['alamatrumah'])); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['tanggalkunjungan'])); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['hobi'])); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['asalSLTA'])); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['pekerjaan'])); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['namaorangtua'])); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['namapacar'])); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['namamantan'])); ?></td>
+
     </tr>
   <?php endwhile; ?>
 </table>

@@ -54,10 +54,16 @@ simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
 */
 if (!empty($errors)) {
   $_SESSION['old'] = [
-    'nama'  => $nama,
-    'email' => $email,
-    'pesan' => $pesan,
-    'captcha' => $captcha,
+    'kodepengunjung'  => $kodepengunjung,
+    'namapengunjung' => $namapengunjung,
+    'alamatrumah' => $alamatrumah,
+    'tanggalkunjungan' => $tanggalkunjungan,
+    'hobi' => $hobi,
+    'asalSLTA' => $asalSLTA,
+    'pekerjaan' => $pekerjaan,
+    'namaorangtua' => $namaorangtua,
+    'namapacar' => $namapacar,
+    'namamantan' => $namamantan,
   ];
 
   $_SESSION['flash_error'] = implode('<br>', $errors);
@@ -65,7 +71,7 @@ if (!empty($errors)) {
 }
 
 #menyiapkan query INSERT dengan prepared statement
-$sql = "INSERT INTO tbl_tamu (cnama, cemail, cpesan) VALUES (?, ?, ?)";
+$sql = "INSERT INTO tbl_pengunjung (kodepengunjung, namapengunjung, alamatrumah, tanggalkunjungan, hobi, asalSLTA, pekerjaan, namaorangtua, namapacar, namamantan ) VALUES (?, ?, ?)";
 $stmt = mysqli_prepare($conn, $sql);
 
 if (!$stmt) {
@@ -74,7 +80,7 @@ if (!$stmt) {
   redirect_ke('index.php#contact');
 }
 #bind parameter dan eksekusi (s = string)
-mysqli_stmt_bind_param($stmt, "sss", $nama, $email, $pesan);
+mysqli_stmt_bind_param($stmt, "sss", $kodepengunjung, $namapengunjung, $alamatrumah, $tanggalkunjungan, $hobi, $asalSLTA, $pekerjaan, $namaorangtua, $namapacar, $namamantan );
 
 if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value, beri pesan sukses
   unset($_SESSION['old']);
@@ -82,10 +88,16 @@ if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value, beri pesa
   redirect_ke('index.php#contact'); #pola PRG: kembali ke form / halaman home
 } else { #jika gagal, simpan kembali old value dan tampilkan error umum
   $_SESSION['old'] = [
-    'nama'  => $nama,
-    'email' => $email,
-    'pesan' => $pesan,
-    'captcha' => $captcha,
+    'kodepengunjung'  => $kodepengunjung,
+    'namapengunjung' => $namapengunjung,
+    'alamatrumah' => $alamatrumah,
+    'tanggalkunjungan' => $tanggalkunjungan,
+    'hobi' => $hobi,
+    'asalSLTA' => $asalSLTA,
+    'pekerjaan' => $pekerjaan,
+    'namaorangtua' => $namaorangtua,
+    'namapacar' => $namapacar,
+    'namamantan' => $namamantan,
   ];
   $_SESSION['flash_error'] = 'Data gagal disimpan. Silakan coba lagi.';
   redirect_ke('index.php#contact');
