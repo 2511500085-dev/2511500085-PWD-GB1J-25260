@@ -29,7 +29,7 @@ USE `db_pwd2025`;
 -- Table structure for table `tbl_tamu`
 --
 
-CREATE TABLE `tbl_tamu` (
+CREATE TABLE `tbl_pengunjung` (
   `cid` int NOT NULL,
   `cnama` varchar(100) DEFAULT NULL,
   `cemail` varchar(100) DEFAULT NULL,
@@ -52,7 +52,7 @@ INSERT INTO `tbl_tamu` (`cid`, `cnama`, `cemail`, `cpesan`, `dcreated_at`) VALUE
 --
 -- Indexes for table `tbl_tamu`
 --
-ALTER TABLE `tbl_tamu`
+ALTER TABLE `tbl_pengunjung`
   ADD PRIMARY KEY (`cid`);
 
 --
@@ -62,7 +62,7 @@ ALTER TABLE `tbl_tamu`
 --
 -- AUTO_INCREMENT for table `tbl_tamu`
 --
-ALTER TABLE `tbl_tamu`
+ALTER TABLE `tbl_pengunjung`
   MODIFY `cid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
