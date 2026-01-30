@@ -28,7 +28,7 @@
   $asalSLTA = bersihkan ($_POST['txtAsalSMA'] ?? '');
   $pekerjaan = bersihkan ($_POST['txtKerja'] ?? '');
   $namaorangtua =  bersihkan ($_POST['txtNmOrtu'] ?? '');
-  $namapacar = berrsihkan ($_POST['txtNmPacar'] ?? '');
+  $namapacar = bersihkan ($_POST['txtNmPacar'] ?? '');
   $namamantan = bersihkan ($_POST['txtNmMantan'] ?? '');
 
   #Validasi sederhana
