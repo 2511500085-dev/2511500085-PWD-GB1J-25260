@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_pwd2025`
 --
-CREATE DATABASE IF NOT EXISTS `db_pwd2025` DEFAULT CHARACTER SET utf8mb4;
+CREATE DATABASE IF NOT EXISTS `db_pwd2025` DEFAULT CHARACTER SET utf8mb4 ;
 USE `db_pwd2025`;
 
 -- --------------------------------------------------------
@@ -29,7 +29,7 @@ USE `db_pwd2025`;
 -- Table structure for table `tbl_tamu`
 --
 
-CREATE TABLE `tbl_mahasiswa` (
+CREATE TABLE `tbl_tamu` (
   `cid` int NOT NULL,
   `cnama` varchar(100) DEFAULT NULL,
   `cemail` varchar(100) DEFAULT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE `tbl_mahasiswa` (
 -- Dumping data for table `tbl_tamu`
 --
 
-INSERT INTO `tbl_mahasiswa` (`cid`, `cnama`, `cemail`, `cpesan`, `dcreated_at`) VALUES
+INSERT INTO `tbl_tamu` (`cid`, `cnama`, `cemail`, `cpesan`, `dcreated_at`) VALUES
 (20, 'Nur Faddddd', 'a@gmail.com', 'sadadas faedfasd', '2025-12-24 12:21:52'),
 (21, 'nicolas lim', 'sada@i.com', 'kskakds a da', '2025-12-24 12:22:04');
 
@@ -52,7 +52,7 @@ INSERT INTO `tbl_mahasiswa` (`cid`, `cnama`, `cemail`, `cpesan`, `dcreated_at`) 
 --
 -- Indexes for table `tbl_tamu`
 --
-ALTER TABLE `tbl_mahasiswa`
+ALTER TABLE `tbl_tamu`
   ADD PRIMARY KEY (`cid`);
 
 --
@@ -62,7 +62,7 @@ ALTER TABLE `tbl_mahasiswa`
 --
 -- AUTO_INCREMENT for table `tbl_tamu`
 --
-ALTER TABLE `tbl_mahasiswa`
+ALTER TABLE `tbl_tamu`
   MODIFY `cid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
