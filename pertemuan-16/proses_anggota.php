@@ -150,4 +150,4 @@ $arrAnggota = [
 ];
 $_SESSION["anggota"] = $arrAnggota;
 
-header("location: indexanggota.php#anggota");
+header("location: indexanggota.php#Dataanggota"); 
