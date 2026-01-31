@@ -7,7 +7,7 @@ require_once __DIR__ . '/fungsi.php';
 #cek method form, hanya izinkan POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   $_SESSION['flash_error'] = 'Akses tidak valid.';
-  redirect_ke('index.php#contact');
+  redirect_ke('indexanggota.php#anggota');
 }
 
 #ambil dan bersihkan nilai dari form
@@ -55,18 +55,24 @@ simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
 */
 if (!empty($errors)) {
   $_SESSION['old'] = [
-    'nama'  => $nama,
-    'email' => $email,
-    'pesan' => $pesan,
-    'captcha' => $captcha,
+    'Nomor'  => $Nomor,
+    'Nama' => $Nama,
+    'Jabatan' => $Jabatan,
+    'Kemampuan' => $Kemampuan,
+    'Gaji' => $Gaji,
+    'NomorWA' => $NomorWA,
+    'Batalion' => $Batalion,
+    'Beratbadan' => $Beratbadan,
+    'Tinggibadan' => $Tinggibadan,
   ];
 
   $_SESSION['flash_error'] = implode('<br>', $errors);
-  redirect_ke('index.php#contact');
+  redirect_ke('indexanggota.php#biodata');
 }
 
 #menyiapkan query INSERT dengan prepared statement
-$sql = "INSERT INTO tbl_tamu (cnama, cemail, cpesan) VALUES (?, ?, ?)";
+$sql = "INSERT INTO anggota (Nomor, Nama, Jabatan, Kemampuan, Gaji, NommorWA, Batalion, Beratbadan, Tinggibadan) 
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 $stmt = mysqli_prepare($conn, $sql);
 
 if (!$stmt) {
@@ -75,7 +81,7 @@ if (!$stmt) {
   redirect_ke('index.php#contact');
 }
 #bind parameter dan eksekusi (s = string)
-mysqli_stmt_bind_param($stmt, "sss", $nama, $email, $pesan);
+mysqli_stmt_bind_param($stmt, "sssssssss", $Nomor, $Nama, $Jabatan, $Kemampuan, $Gaji, $NomorWA, $Batalion, $Beratbadan, $Tinggibadan);
 
 if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value, beri pesan sukses
   unset($_SESSION['old']);
@@ -83,10 +89,17 @@ if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value, beri pesa
   redirect_ke('indexanggota.php#anggota'); #pola PRG: kembali ke form / halaman home
 } else { #jika gagal, simpan kembali old value dan tampilkan error umum
   $_SESSION['old'] = [
-    'nama'  => $nama,
-    'email' => $email,
-    'pesan' => $pesan,
-    'captcha' => $captcha,
+    'Nomor'  => $Nomor,
+    'Nama' => $Nama,
+    'Jabatan' => $Jabatan,
+    'Kemampuan' => $Kemampuan,
+    'Gaji' => $Gaji,
+    'NomorWA' => $NomorWA,
+    'Batalion' => $Batalion,
+    'Beratbadan' => $Beratbadan,
+    'Tinggibadan' => $Tinggibadan,
+    
+    
   ];
   $_SESSION['flash_error'] = 'Data gagal disimpan. Silakan coba lagi.';
   redirect_ke('indexanggota.php#anggota');

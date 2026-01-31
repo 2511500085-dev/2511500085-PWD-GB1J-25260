@@ -3,7 +3,7 @@
   require 'koneksi.php';
   require 'fungsi.php';
 
-  $sql = "SELECT * FROM anggota ORDER BY cid DESC";
+  $sql = "SELECT * FROM anggota ORDER BY id DESC";
   $q = mysqli_query($conn, $sql);
   if (!$q) {
     die("Query error: " . mysqli_error($conn));
@@ -51,19 +51,19 @@
     <tr>
       <td><?= $i++ ?></td>
       <td>
-        <a href="editanggota.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
-        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['cnama']); ?>?')" href="prosesanggota_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
+        <a href="editanggota.php?id=<?= (int)$row['id']; ?>">Edit</a>
+        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['cnama']); ?>?')" href="prosesanggota_delete.php?id=<?= (int)$row['id']; ?>">Delete</a>
       </td>
-      <td><?= $row['cid']; ?></td>
-      <td><?= htmlspecialchars($row['nomor']); ?></td>
-      <td><?= htmlspecialchars($row['nama']); ?></td>
-      <td><?= htmlspecialchars($row['jabatan']); ?></td>
-      <td><?= htmlspecialchars($row['kemampuan']); ?></td>
-      <td><?= htmlspecialchars($row['gaji']); ?></td>
-      <td><?= htmlspecialchars($row['nomorWA']); ?></td>
-      <td><?= htmlspecialchars($row['betalion']); ?></td>
-      <td><?= htmlspecialchars($row['beratbadan']); ?></td>
-      <td><?= htmlspecialchars($row['tinggibadan']); ?></td>
+      <td><?= $row['id']; ?></td>
+      <td><?= nl2br(htmlspecialchars($row['Nomor'])); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['Nama'])); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['Jabatan'])); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['Kemampuan'])); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['Gaji'])); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['NomorWA'])); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['Betalion'])); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['Beratbadan'])); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['Tinggibadan'])); ?></td>
     </tr>
   <?php endwhile; ?>
 </table>
