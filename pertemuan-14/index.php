@@ -43,43 +43,63 @@ require_once __DIR__ . '/fungsi.php';
       <form action="proses.php" method="POST">
 
         <label for="txtKodePen"><span>Kode Pengunjung:</span>
-          <input type="text" id="txtKodePen" name="txtKodePen" placeholder="Masukkan Kode Pengunjung" required>
+          <input type="text" id="txtKodePen" name="txtKodePen"
+           placeholder="Masukkan Kode Pengunjung" required autocomplete="kode"
+           value="<?= isset($old['kode']) ? htmlspecialchars($old['kode']) : '' ?>">
         </label>
 
         <label for="txtNmPengunjung"><span>Nama Pengunjung:</span>
-          <input type="text" id="txtNmPengunjung" name="txtNmPengunjung" placeholder="Masukkan Nama Pengunjung" required>
+          <input type="text" id="txtNmPengunjung" name="txtNmPengunjung"
+           placeholder="Masukkan Nama Pengunjung" required autocomplete="name"
+           value="<?= isset($old['name']) ? htmlspecialchars($old['name']) : '' ?>">
         </label>
 
         <label for="txtAlRmh"><span>Alamat Rumah:</span>
-          <input type="text" id="txtAlRmh" name="txtAlRmh" placeholder="Masukkan Alamat Rumah" required>
+          <input type="text" id="txtAlRmh" name="txtAlRmh" 
+          placeholder="Masukkan Alamat Rumah" required autocomplete="ALrmh"
+          value="<?= isset($old['Alrmh']) ? htmlspecialchars($old['ALrmh']) : '' ?>">
         </label>
 
         <label for="txtTglKunjungan"><span>Tanggal Kunjungan:</span>
-          <input type="text" id="txtTglKunjungan" name="txtTglKunjungan" placeholder="Masukkan Tanggal Kunjungan" required>
+          <input type="text" id="txtTglKunjungan" name="txtTglKunjungan"
+           placeholder="Masukkan Tanggal Kunjungan" required autocomplete="tglkunjungan"
+           value="<?= isset($old['tglkunjungan']) ? htmlspecialchars($old['tglkunjungan']) : '' ?>">
         </label>
 
         <label for="txtHobi"><span>Hobi:</span>
-          <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukkan Hobi" required>
+          <input type="text" id="txtHobi" name="txtHobi" 
+          placeholder="Masukkan Hobi" required autocomplete="hobi"
+          value="<?= isset($old['hobi']) ? htmlspecialchars($old['hobi']) : '' ?>">
         </label>
 
         <label for="txtAsalSMA"><span>Asal SLTA:</span>
-          <input type="text" id="txtAsalSMA" name="txtAsalSMA" placeholder="Masukkan Asal SLTA" required>
+          <input type="text" id="txtAsalSMA" name="txtAsalSMA" 
+          placeholder="Masukkan Asal SLTA" required autocomplete="asalSMA"
+          value="<?= isset($old['asalSMA']) ? htmlspecialchars($old['asalSMA']) : '' ?>">
         </label>
 
         <label for="txtKerja"><span>Pekerjaan:</span>
-          <input type="text" id="txtKerja" name="txtKerja" placeholder="Masukkan Pekerjaan" required>
+          <input type="text" id="txtKerja" name="txtKerja" 
+          placeholder="Masukkan Pekerjaan" required autocomplete="kerja"
+          value="<?= isset($old['kerja']) ? htmlspecialchars($old['kerja']) : '' ?>">
         </label>
 
         <label for="txtNmOrtu"><span>Nama Orang Tua:</span>
-          <input type="text" id="txtNmOrtu" name="txtNmOrtu" placeholder="Masukkan Nama Orang Tua" required>
+          <input type="text" id="txtNmOrtu" name="txtNmOrtu"
+           placeholder="Masukkan Nama Orang Tua" required autocomplete="namaorangtua"
+           value="<?= isset($old['namaorangtua']) ? htmlspecialchars($old['namaorangtua']) : '' ?>">
         </label>
 
         <label for="txtNmPacar"><span>Nama Pacar:</span>
-          <input type="text" id="txtNmPacar" name="txtNmPacar" placeholder="Masukkan Nama Pacar" required>
+          <input type="text" id="txtNmPacar" name="txtNmPacar" 
+          placeholder="Masukkan Nama Pacar" required autocomplete="namapacar"
+          value="<?= isset($old['namapacar']) ? htmlspecialchars($old['namapacar']) : '' ?>">
         </label>
 
         <label for="txtNmMantan"><span>Nama Mantan:</span>
-          <input type="text" id="txtNmMantan" name="txtNmMantan" placeholder="Masukkan Nama Mantan" required>
+          <input type="text" id="txtNmMantan" name="txtNmMantan"
+           placeholder="Masukkan Nama Mantan" required autocomplete="namamantan"
+           value="<?= isset($old['namamantan']) ? htmlspecialchars($old['namamantan']) : '' ?>">
         </label>
 
         <button type="submit">Kirim</button>
@@ -132,7 +152,7 @@ require_once __DIR__ . '/fungsi.php';
         </div>
       <?php endif; ?>
 
-      <form action="proses.php" method="POST">
+      <form action="" method="POST">
 
         <label for="txtNama"><span>Nama:</span>
           <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama"
