@@ -41,7 +41,7 @@ CREATE TABLE `tbl_pengunjung` (
 -- Dumping data for table `tbl_tamu`
 --
 
-INSERT INTO `tbl_tamu` (`cid`, `cnama`, `cemail`, `cpesan`, `dcreated_at`) VALUES
+INSERT INTO `tbl_pengunjung` (`cid`, `cnama`, `cemail`, `cpesan`, `dcreated_at`) VALUES
 (20, 'Nur Faddddd', 'a@gmail.com', 'sadadas faedfasd', '2025-12-24 12:21:52'),
 (21, 'nicolas lim', 'sada@i.com', 'kskakds a da', '2025-12-24 12:22:04');
 
