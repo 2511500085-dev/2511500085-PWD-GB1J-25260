@@ -39,6 +39,7 @@
     <th>Nomor</th>
     <th>Nama</th>
     <th>Jabatan</th>
+    <th>Tanggaljadi</th>
     <th>Kemampuan</th>
     <th>Gaji</th>
     <th>NomorWA</th>
@@ -52,18 +53,19 @@
       <td><?= $i++ ?></td>
       <td>
         <a href="editanggota.php?id=<?= (int)$row['id']; ?>">Edit</a>
-        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['cnama']); ?>?')" href="prosesanggota_delete.php?id=<?= (int)$row['id']; ?>">Delete</a>
+        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['Nama']); ?>?')" href="prosesanggota_delete.php?id=<?= (int)$row['id']; ?>">Delete</a>
       </td>
       <td><?= $row['id']; ?></td>
-      <td><?= nl2br(htmlspecialchars($row['Nomor'])); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['Nama'])); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['Jabatan'])); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['Kemampuan'])); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['Gaji'])); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['NomorWA'])); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['Betalion'])); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['Beratbadan'])); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['Tinggibadan'])); ?></td>
+      <td><?= htmlspecialchars($row['Nomor']); ?></td>
+      <td><?= htmlspecialchars($row['Nama']); ?></td>
+      <td><?= htmlspecialchars($row['Jabatan']); ?></td>
+      <td><?= htmlspecialchars($row['Tanggaljadi']); ?></td>
+      <td><?= htmlspecialchars($row['Kemampuan']); ?></td>
+      <td><?= htmlspecialchars($row['Gaji']); ?></td>
+      <td><?= htmlspecialchars($row['NomorWA']); ?></td>
+      <td><?= htmlspecialchars($row['Betalion']); ?></td>
+      <td><?= htmlspecialchars($row['Beratbadan']); ?></td>
+      <td><?= htmlspecialchars($row['Tinggibadan']); ?></td>
     </tr>
   <?php endwhile; ?>
 </table>
